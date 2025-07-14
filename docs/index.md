@@ -1,17 +1,18 @@
-# Welcome to MkDocs
+# コンテンツ一覧
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+以下の各ページからWikiコンテンツを閲覧できます。
 
-## Commands
+- [AWS Tips](AWS Tips.md)
+- [CentOS](CentOS.md)
+- [debian](debian.md)
+- [DOALR](DOALR.md)
+- [DOCKERの設定](DOCKERの設定.md)
+- [Generative AI Use Cases JPの構築](Generative AI Use Cases JPの構築.md)
+- [MacOSX](MacOSX.md)
+- [Skyrim](Skyrim.md)
+- [SkyrimATF](SkyrimATF.md)
+- [skyrimSE](skyrimSE.md)
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+---
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+※このページは自動生成されたコンテンツへの扉ページです。

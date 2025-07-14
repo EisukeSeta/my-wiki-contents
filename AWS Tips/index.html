@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>AWS Tips - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">コンテンツ一覧</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">AWS Tips</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CentOS/" class="nav-link">CentOS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DOALR/" class="nav-link">DOALR</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DOCKER%E3%81%AE%E8%A8%AD%E5%AE%9A/" class="nav-link">DOCKERの設定</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Generative%20AI%20Use%20Cases%20JP%E3%81%AE%E6%A7%8B%E7%AF%89/" class="nav-link">Generative AI Use Cases JPの構築</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../MacOSX/" class="nav-link">MacOSX</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Skyrim/" class="nav-link">Skyrim</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../SkyrimATF/" class="nav-link">SkyrimATF</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../debian/" class="nav-link">Debian</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../skyrimSE/" class="nav-link">skyrimSE</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href=".." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../CentOS/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>[[FrontPage]]</p>
+<p>*AWS費用 [#u7464e4e]
+-参考リンク
+--[[ざっくりAWS (EC2):https://aws-rough.cc/ec2/]]
+---[[ざっくりAWS Fargateの料金を日本円で計算:https://aws-rough.cc/fargate/]]</p>
+<p>*EC2の設定 [#d82e481c]</p>
+<p>-参考リンク
+--[[【AWS】VPCを設定して自分だけのネットワーク環境を構築してみよう:https://kacfg.com/vpc/]]
+--[[【AWS】EC2でAmazon Linux 2を構築しSSH接続してみよう:https://kacfg.com/ec2-amazon-linux/]]</p>
+<p>**Node.js のセットアップ [#a540fdf9]
+-Linux インスタンスで Node.js を設定するには
++SSH を使用して、Linux インスタンスに ec2-user として接続します。
++コマンドラインで次のように入力して、ノードバージョンマネージャー (nvm) をインストールします。
+ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+nvm では Node.js の複数のバージョンをインストールすることができ、またそれらの切り替えもできるため、nvm を使用して Node.js をインストールします。
++コマンドラインで次のように入力し、nvm をロードします。
+ source ~/.bashrc
++コマンドラインで次のように入力し、nvm を使用して Node.js の最新の LTS バージョンをインストールします。
+ nvm install --lts
++コマンドラインで次のように入力して、Node.js が正しくインストールされ、実行されていることをテストします。
+ node -e "console.log('Running Node.js ' + process.version)"
+ Running Node.js VERSION</p>
+<p>-参考リンク
+--[[Github nvm:https://github.com/nvm-sh/nvm/blob/master/README.md#installing-and-updating]]
+--[[チュートリアル: Amazon EC2 インスタンスでの Node.js のセットアップ:https://docs.aws.amazon.com/ja_jp/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html]]</p>
+<p>**AWS CDK CLI のインストール [#cc1b8a9a]
+-Node Package Managerを使用してCKD CLIをインストール （-g オプションでグローバルにインストール）
+ $ npm install -g aws-cdk
+-CDK CLI の正常なインストールの確認
+ $ cdk --version
+-AWS CLIが設定したローカル環境のアクセスキーを取得する
+ $ cat ~/.aws/credentials 
+ [default]
+ aws_access_key_id = XXXXXXXXXXXX
+ aws_secret_access_key = XXXXXXXXXXXX</p>
+<p>-参考リンク
+--[[AWS CDK の開始方法:https://docs.aws.amazon.com/ja_jp/cdk/v2/guide/getting_started.html]]
+--[[ローカル環境でIAMロール権限を取得する:https://qiita.com/harumaki-web/items/f7ec46cb5f6b7b5a9cc3]]</p>
+<ul>
+<li>Fargateの設定 [#wd7db513]</li>
+</ul>
+<p>-参考リンク
+--[[[初心者向け]言われるままにFargate初めて触ったので、忘れないための記録:https://dev.classmethod.jp/articles/fargate-my-first-step/]]</p>
+<p>**AWS Copilot CLI [#zaaf5db4]
+-[[Homebrew:https://brew.sh/ja/]]のインストール
+ $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+--/home/linuxbrew/　以下にインストールされる。インストール途中の指示に従う。
+ ==&gt; Next steps:
+ - Run these commands in your terminal to add Homebrew to your PATH:
+     echo &gt;&gt; /home/seta/.bashrc
+     echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' &gt;&gt; /home/seta/.bashrc
+     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+ - Install Homebrew's dependencies if you have sudo access:
+     sudo apt-get install build-essential
+   For more information, see:
+     https://docs.brew.sh/Homebrew-on-Linux
+ - We recommend that you install GCC:
+     brew install gcc
+ - Run brew help to get started
+ - Further documentation:
+     https://docs.brew.sh
+-AWS CopilotをHomebrewでインストール
+ $ brew install aws/tap/copilot-cli
+--インストールされたバージョンの確認
+ $ copilot --version
+ copilot version: v1.34.0
+--ヘルプの表示
+ $ copilot --help
+-アプリケーションの作成、コマンドを実行したディレクトリに存在する Dockerfile を自動的に検出してくれる
+ $ copilot app init copilot-demo-app --resource-tags
+もしくは簡単に copilot initで、インタラクティブに情報を指定する
+ $ copilot init
+今回指定した情報は以下
+ Application name: copilot-pukiwiki
+ Which workload type best represents your architecture?: Load Balanced Web Service   (Public. ALB by default. Internet to ECS on Fargate)
+ What do you want to name this service?: cop-pukiwiki
+ Which Dockerfile would you like to use for cop-pukiwiki?: Use an existing image instead
+ What's the location ([registry/]repository[:tag|@digest]) of the image to use?: pengo/pukiwiki
+ Which port do you want customer traffic sent to?: 80 （デフォルト）
+ Would you like to deploy an environment? [? for help] (y/N) : y
+ What is your environment's name?: copilot-pukiwiki-env
+-アプリケーションの一覧
+ $ copilot app ls
+-アプリケーションに含まれるサービスや環境の一覧を表示
+ $ copilot app show
+-アプリケーションの削除（deleteコマンドで環境一式まるまる削除が可能）
+ $ copilot app ls
+ copilot-pukiwiki
+ $ copilot app delete copilot-pukiwiki</p>
+<p>-参考リンク
+--[[ECSのオペレーションを劇的に簡略化するAWS Copilotが発表されました！:https://dev.classmethod.jp/articles/aws-copilot/]]
+--[[AWS Copilot CLI のインストール:https://docs.aws.amazon.com/AmazonECS/latest/developerguide/copilot-install.html]]
+--[[AWS Copilot 入門:https://qiita.com/yoshii0110/items/8a74cc0fc540ae3f2389]]
+--[[AWS Copilotで検証環境を構築した話:https://qiita.com/ttanaka-gxp/items/238017f2ea61492ac154]]
+--[[AWS Copilot CLIを試してみた:https://qiita.com/zumax/items/bc89fb76db531742499b]]
+--[[AWS Copilot CLIのススメ:https://zenn.dev/praha/articles/f42467cd6a9e79]]</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

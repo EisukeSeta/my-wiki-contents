@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Debian - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">コンテンツ一覧</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../AWS%20Tips/" class="nav-link">AWS Tips</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CentOS/" class="nav-link">CentOS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DOALR/" class="nav-link">DOALR</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DOCKER%E3%81%AE%E8%A8%AD%E5%AE%9A/" class="nav-link">DOCKERの設定</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Generative%20AI%20Use%20Cases%20JP%E3%81%AE%E6%A7%8B%E7%AF%89/" class="nav-link">Generative AI Use Cases JPの構築</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../MacOSX/" class="nav-link">MacOSX</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Skyrim/" class="nav-link">Skyrim</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../SkyrimATF/" class="nav-link">SkyrimATF</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Debian</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../skyrimSE/" class="nav-link">skyrimSE</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../SkyrimATF/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../skyrimSE/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#contents" class="nav-link">contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>[[seta.go.dyndns.org]]</p>
+<p>*目次 [#e62c9df1]</p>
+<h1 id="contents">contents</h1>
+<p><em>apt [#e6c9812b]
+</em>*aptの使い方 （aptitudeを推奨）[#f83c48ed]
+ aptitude install YYXXXYY
+ aptitude search XXX</p>
+<p>apt-get {update|upgrade|dist-upgrade}
+ apt-get install YYXXXYY
+ apt-cache pkgnames XXX
+ apt-cache show YYXXXYY</p>
+<p>インストール済みパッケージ一覧
+ dpkg -l</p>
+<p>***apt-line [#qbfac96d]
+ deb http://ftp.debian.org/debian lenny main contrib non-free</p>
+<p>deb http://security.debian.org/ lenny/updates main contrib non-free
+ deb http://volatile.debian.org/debian-volatile lenny/volatile main contrib non-free </p>
+<p>deb http://ftp.jp.debian.org/debian-volatile lenny/volatile main contrib non-free</p>
+<p>[[lenny/Package:http://debian.fam.cx/index.php?lenny%2FPackage]]</p>
+<p>***Debian Backports [#r8f9b7f5]
+testing や unstable から Backport したパッケージを提供している。
+どんなパッケージが提供されているかは、 http://packages.debian.org/lenny-backports/ を参照。</p>
+<p>deb http://ftp.jp.debian.org/debian-backports lenny-backports main contrib non-free
+ deb-src http://ftp.jp.debian.org/debian-backports lenny-backports main contrib non-free</p>
+<p>上記以外のミラーは Debian Backports - Mirrors を参照。</p>
+<p>使い方は Debian Backports - Instructions や パッケージの FAQ - Backports を参照。</p>
+<p>まずは debian-backports-keyring パッケージをインストールし、公開鍵を入手して下さい。</p>
+<p>***apt-get [#v73282fe]
+ apt-get install debian-backports-keyring
+ apt-get install aptitude</p>
+<p>aptitude install php5
+ aptitude install ddclient
+ aptitude install mysql-server
+ aptitude install php5-mysql</p>
+<p><strong>apt以外でインストール [#k6bb39fb]
+</strong>*tarball [#if2b4bfb]
+ pukiwiki-1.4.7_notb_utf8.tar.gz
+ wordpress-3.0.1-ja.tar.gz</p>
+<p><em>パッケージのインストールメモ [#j9040d6d]
+//</em>*apache2 [#c5da87e1]
+///etc/apache2/apache2.confのユーザー、グループを変更。
+// User www-data
+// Group www-data
+///var/www/html以下も適宜変更。</p>
+<p><strong>MySQL [#k3ccdb32]
+</strong>*参考URL [#zc132122]
++[[Debian etch に MySQL 5 と設定ツールを導入する:http://asaasa.tk/wiki/?Debian%2FServer%2FMySQL]]
++[[debianにMySQLをインストールして設定する - 見果てぬ夢:http://d.hatena.ne.jp/Loups-garous/20080919/1221816870]]</p>
+<p>***インストール [#n34c4951]
+ $ sudo aptitude install mysql-server
+ $ sudo aptitude install php5-mysql</p>
+<p>***起動確認 [#r64eaebf]
+ $ mysqladmin ping -u root -p
+ mysqld is alive</p>
+<p>***uft-8設定 [#vfefe98f]
+/etc/mysql/my.cnfを編集。
+ [client]
+ default-character-set=utf8</p>
+<p>[mysql] 
+ default-character-set=utf8</p>
+<p>[mysqld]
+ default-character-set=utf8
+ language=/usr/share/mysql/japanese
+ skip-character-set-client-handshake</p>
+<p>文字コード確認。
+ mysql&gt; status
+ mysql&gt; SHOW VARIABLES LIKE 'char%'; </p>
+<p><strong>WordPress日本語版 [#y61b4f27]
+</strong>*参考URL [#fc2fd2f8]
++[[WordPress.日本語:http://wpdocs.sourceforge.jp/]]
++[[wordpressの設定 -metalglue:http://d.hatena.ne.jp/metalglue/20061204/1165231144]]</p>
+<p>***インストール [#o106424d]
+[[WordPress.日本語:http://wpdocs.sourceforge.jp/]]の[[WordPressのインストール:http://wpdocs.sourceforge.jp/WordPress_%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB]]に従い、最新版のWordPress日本語版をダウンロード（[[ja.wordpress.org:http://ja.wordpress.org/]]）。</p>
+<p>MySQLデータベースの準備。
+ $ mysql -u root -p
+ mysql&gt; CREATE DATABASE wordpress;
+ mysql&gt; GRANT ALL PRIVILEGES ON wordpress.* TO "wordpressusername"@"localhost"
+    -&gt; IDENTIFIED BY "password";
+ mysql&gt; FLUSH PRIVILEGES;</p>
+<p>wordpressのインストール
++[[http://seta.mydns.jp/html/wordpress/wp-admin/install.php:http://seta.mydns.jp/html/wordpress/wp-admin/install.php]]にアクセス。
++「5分でできるインストールプロセス」を実施。
++最初の書き込みをチェックして終わり。</p>
+<p>***アクセス [#s6e0fe08]
+[[http://seta.mydns.jp/html/wordpress:http://seta.mydns.jp/html/wordpress]]</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

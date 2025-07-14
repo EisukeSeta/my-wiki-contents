@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>MacOSX - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">コンテンツ一覧</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../AWS%20Tips/" class="nav-link">AWS Tips</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CentOS/" class="nav-link">CentOS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DOALR/" class="nav-link">DOALR</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DOCKER%E3%81%AE%E8%A8%AD%E5%AE%9A/" class="nav-link">DOCKERの設定</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Generative%20AI%20Use%20Cases%20JP%E3%81%AE%E6%A7%8B%E7%AF%89/" class="nav-link">Generative AI Use Cases JPの構築</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">MacOSX</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Skyrim/" class="nav-link">Skyrim</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../SkyrimATF/" class="nav-link">SkyrimATF</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../debian/" class="nav-link">Debian</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../skyrimSE/" class="nav-link">skyrimSE</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Generative%20AI%20Use%20Cases%20JP%E3%81%AE%E6%A7%8B%E7%AF%89/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Skyrim/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#contents" class="nav-link">contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#attach" class="nav-link">attach()</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>[[seta.go.dyndns.org]]</p>
+<p>*目次 [#iecc6bf4]</p>
+<h1 id="contents">contents</h1>
+<p><em>Mac OS X 覚え書き [#pea532b5]
+</em>*MacでWindowsキーボードを使う - Karabiner-Elements [#ybbbc530]
+-[[MacでWindows用キーボードを使用する方法（High Sierraにも対応）:https://creative89.com/2017/05/27/how-to-use-windows-keyboard-on-mac/#Karabiner-Elements]]
+|From key|To key|h
+|PCキーボードの無変換キー|英数キー|
+|PCキーボードの変換キー|かなキー|
+|pause|eject|
+macをスリープさせるショートカット:「command+alt+eject」</p>
+<p><strong>文字入力 [#lc403113]
+|文字|入力|h
+|バックスラッシュ|Option + |
+|円記号|Option + y|
+</strong>*emacs [#gd8e6876]
+|不具合|対処|h
+|SpotlightメニューにCtrl+Spaceを取られる|システム環境設定で変更（Ctrl+Option+Space）|
+|Metaキーが効かない|Aquamacs Options→Option key→meta 又は command+;|
+|Butlerの「iTunes情報」「省略名を入力」が起動してしまう|Butlerの該当機能を削除|</p>
+<p>***SKK [#f0e4adba]
+-AquaSKK
+--[[AquaSKK:http://aquaskk.sourceforge.jp/]] （辞書は[[SSK Open Lab:http://openlab.jp/skk/index-j.html]]からダウンロード）、[[AquaSKK Pathch Project:http://homepage.mac.com/t.suwa/aquaskk/]]
+-SKKその他
+--[[ようこそ、SKK Openlab へ:http://openlab.ring.gr.jp/skk/index-j.html]]
+--[[SKKで正字正かな:http://kstn.fc2web.com/skk_seikana.html]]</p>
+<p>&amp;aname(Option);
+**起動ディスクの選択 [#ef2ec507]
+-option キーを押しながらコンピュータを再起動する。利用できる起動ディスクが表示されるので、そこで選択する。
+-「システム環境設定」を開き、
+++「起動ディスク」をクリック。
+++必要に応じてカギのアイコンをクリックし、管理者ユーザの名前とパスワードを入力。
+++使用するシステムフォルダのアイコンをクリックして、「再起動」をクリック。</p>
+<p>-Option＋"T"キーで、ターゲットディスクモードとして起動できる。</p>
+<p>|電源入時押下キー|機能|h
+|[Option]|起動ディスク選択|
+|[Shift]|セーフモードで起動|
+|[Cmd]+V|ブートメッセージをコンソール表示して起動|
+|[Cmd]+S|シングルユーザーモードで起動|
+|C|CD(DVD)ドライブから起動|
+|D|内蔵HDから起動|
+|N|ネットワークブート|
+|X|Mac OS X起動（Mac OS 9とMac OS Xがインストールされた環境）|
+|T|外付ハードディスクとして扱えるFireWireターゲットモードで起動|
+|[Option]+[Cmd]+O+F|Open Firmware起動|
+|[Option]+[Cmd]+P+R|PRAMクリア|
+|マウスボタン押下|CD(DVD)排出|</p>
+<p>**CDを取り出せないとき [#gc4f2aa3]
+-[[ほかの方法で取り出せないディスクを取り出す:http://docs.info.apple.com/article.html?path=Mac/10.4/jp/mh1750.html]]</p>
+<p>**PRAMクリア [#dacf4bcf]
+-「command」,「option」，「P」および「R」キーを押しながら起動する。2回目の起動音を確認したらキーから指を放す。</p>
+<p>**PMUリセット [#p140b3c4]
+MacBook、MacBook Pro
++ コンピュータがオンになっている場合は、電源を切ります。
++ AC アダプタとコンピュータのバッテリーを取り外します。
++ 電源ボタンを 5 秒間押したままにしてから、ボタンを放します。
++ バッテリーと AC アダプタを再度取り付けます。
++ 電源ボタンを押してコンピュータを再起動します。</p>
+<p>-参考リンク
+--[[PMU のリセットについて:http://tokyo.secret.jp/macs/pmu-mac-reset.html]]
+--[[ アップル製ポータブルコンピュータの SMC (System Management Controller) をリセットする方法:http://support.apple.com/kb/HT1411?viewlocale=ja_JP]]</p>
+<p>**システムのバックアップ [#n5a3ddf5]
+-[[再インストールの準備１---システムのバックアップ:http://tokyo.secret.jp/macs/backup.html]]
+-[[Carbon Copy Cloner:http://homepage.mac.com/tnakamula/appccc.html]]</p>
+<p>&amp;aname(MacPorts);
+<strong>MacPorts - FreeBSDライクなパッケージ管理ツール [#f5d9be85]
+</strong><em>インストール [#r12fe970]
+-要Xcode。Install DVD から標準インストールで可。
+-[[MacPortsのサイト:http://www.macports.org/]]から[[Leopard(Universal):http://svn.macports.org/repository/macports/downloads/MacPorts-1.6.0/MacPorts-1.6.0-10.5-Leopard.dmg]]をダウンロード。
+-dmgファイルをマウントし、MacPorts-1.6.0.pkgをインストール。
+-環境変数にPATHを追加。
+ export PATH=/opt/local/bin:/opt/local/sbin/:$PATH
+ export MANPATH=/opt/local/man:$MANPATH
+</em><strong>使い方 [#n629392c]
+|コマンド|機能|h
+|MacPorts自身を最新の状態にアップデート|$ sudo port -d selfupdate ; sudo port -d sync|
+|ソフトウェア一覧の更新|$ sudo port sync|
+|ソフトウェアの検索|$ port search zsh|
+|ソフトウェアのインストール|$ sudo port install zsh|
+|ソフトウェアのアップグレード|$ sudo port upgrade zsh|
+|ソフトウェアのアンインストール|$ sudo port uninstall zsh|
+|インストール済みソフトウェアの表示|$ port installed|
+|インストール済みソフトウェアを全てアップグレード|$ sudo port upgrade installed|
+|アップグレード可能なソフトウェアの表示|$ port outdated|
+</strong>*参考サイト [#y30423a9]
+-[[Macの手書き説明書 - MacPorts:http://veadardiary.blog29.fc2.com/blog-entry-1151.html]]
+-[[Beginning OS X 10.5:http://osx.miko.org/index.php/Beginning_OS_X_10.5]]
+-[[Mac OS X (Leopard)にMacPortsをインストール:http://osx.miko.org/index.php/Beginning_OS_X_10.5]]
+-[[MacPortsでステキなUNIXツールをインストール:http://d.hatena.ne.jp/hakobe932/20061208/1165646618]]</p>
+<p>&amp;aname(Fink);
+**Fink - deb形式のパッケージ管理 [#bf883fd0]
+-Finkのインストール。
+--XcodeとX11 for Mac OX Xを事前にインストールしておく。
+--Finkのバイナリインストーラを[[ダウンロード:http://fink.sourceforge.net/download/index.php]]し、インストールする。
+--[[Finkで利用可能なパッケージ集:http://fink.sorceforge.net/pdb/index.php]]。デフォルトではStableパッケージのみインストール可能。
+--ディスクイメージからFinkCommanderを「アプリケーション」→「ユーティリティ」フォルダに移しておく。
+-Finkの使用方法。
+--文字化けを防ぐため、環境変数LANGを設定。
+ $ export LANG=C
+--Fink関連コマンド。
+|コマンド|機能|備考|h
+|$ sudo apt-get update|パッケージリストの更新||
+|$ fink list|パッケージ一覧の表示|iはインストール済み、(i)は更新可能。|
+|$ sudo apt-get install &lt;パッケージ名&gt;|パッケージのインストール|一般コマンドは/sw/bin、管理コマンドは/sw/sbin。|
+|$ sudo apt-get remove &lt;パッケージ名&gt;|パッケージの削除||
+|$ sudo apt-get dist-upgrade|全てのパッケージのアップデート||
+|$ sudo apt-cache showpkg &lt;パッケージ名&gt;|パッケージの情報を見る||
+-Unstableパッケージのインストール。
+--/sw/etc/fink.confのTrees行にunstable/mainとunstable/cryptoを加える。
+ Trees: local/main stable/main stable/crypto local/bootstrap unstable/main unstable/crypto
+-finkの更新。プロンプトでは option (1), "rsync" を選択する。
+ $ sudo fink selfupdate</p>
+<p>&amp;aname(WindowsShare);
+**Windowsファイル共有 [#v09b7b1e]
+-MacのファイルをWindowsで共有するための設定。
+++「システム環境設定」→「共有」→「サービス」。
+++「Windows 共有」を選択し、「開始」。
+++??ホスト名?アカウント名 等でアクセス。
+-[[Windowsの共有フォルダにMacからアクセス:http://www12.ocn.ne.jp/~k-page/lan5.html]]。
+++「アプリケーション」→「ユーティリティ」→「ディレクトリアクセス」。
+++「サービス」から''SMB''を選択し、「設定」。
+++「ワークグループ」にWindowsと同じものを指定する。
+++Finderの''移動''メニューから''サーバへ接続''を選択。
+++「サーバアドレス」欄に smb://ホスト名/共有フォルダ名 でアクセスする。
+-/etc/smb.confの修正。
+--「ユーザ」の「共有フォルダ」(/Users/Shared)を書き込み可で公開。
+ [share]
+   path = /Users/Shared
+   public = yes
+   writable = yes
+--[homes]と[share]へのアクセスを制御。
+   hosts allow = 192.168.1.0/255.255.255.0</p>
+<p>*アプリケーション覚え書き [#v31e5e23]</p>
+<p>&amp;aname(iTunes);
+**iTunes [#s771d026]
+-日本語曲名など、[[ID3タグが文字化けする:http://desireforwealth.com/id3tag.html]]。
+++メニューから「ID3タグを変換...」を実行。
+++「ASCIIからISO Latin-1」を選択。
+-[[ファイアウォールを使用していると音楽の共有ができない:http://til.info.apple.co.jp/cgi-bin/WebObjects/TechInfo.woa/wa/showTIL?id=107547]]。
+++「アップルメニュー」→「システム環境設定」を選択。
+++「共有」パネルをクリック。
+++「ファイアウォール」タブ→「新規」ボタンをクリック。
+++「ポート名」から「その他」を選択し、次のように入力：3689
+++ Tab キーを押し、次のように入力：iTunes Sharing
+++「OK」をクリック。</p>
+<p>**iPod [#g5d9892b]
+-[[Windows用iPodをMacで使用する:http://docs.info.apple.com/jarticle.html?artnum=60920#faq8]]（サポート対象外）。
+--[[アップルのWebサイト:http://www.apple.com/jp/ftp-info/index.html]]にあるMac用の''iPod for Mac Software Updater''を使用し、Windows用にフォーマットされたiPodをMac用に変換する。</p>
+<p>&amp;aname(X11);
+**X11 [#gbf82e5c]
+-X11をDVDメディアからインストール。
+--Macmini
+ $ open '/Volumes/Mac OS X Install Disc 1/System/Installation/Packages/X11User.pkg'
+--MacBookはMac OSX Install Disk 1 の System/Installation/Packages/X11User.pkg</p>
+<p>&amp;aname(Virtualbox);
+**VirtualBox [#pf9f3da5]
+-[[Virtualbox:http://www.virtualbox.org/]]、[[ダウンロード:http://www.virtualbox.org/wiki/Downloads]]
+-[[2,000カ所以上改良された仮想化ソフト「Sun xVM VirtualBox 1.6」:http://journal.mycom.co.jp/news/2008/05/07/038/index.html]]</p>
+<p>&amp;aname(MySQL);
+**MySQL [#b2be900d]
+-http://dev.mysql.com/ からMac OS X 10.3 用バイナリをダウンロード。
+--mysql-standard-5.0.17-osx10.3-powerpc.dmg
+--mysql-administrator-1.1.2-macosx10.3-powerpc.dmg
+--mysql-query-browser-1.1.17-macosx10.3-powerpc.dmg
+--mysql-connector-odbc-3.51.12-apple-darwin8.2.0-powerpc.dmg
+-mysql-standard-5.0.17-osx10.3-powerpc.pkg を実行してインストール。
+-自動起動させる場合は MySQLStartupItem.pkg を実行しておく（最初の１回だけ）。
+-本体に同梱されているMySQL.prefPaneをインストールすれば、システム環境設定からMySQLの起動・終了ができる。
+-手動で起動する場合は
+     shell&gt; cd /usr/local/mysql
+     shell&gt; sudo ./bin/mysqld_safe
+     (Enter your password, if necessary)
+     (Press Control-Z)
+     shell&gt; bg
+     (Press Control-D or enter "exit" to exit the shell)</p>
+<p>You should be able to connect to the MySQL server, for example, by
+ running `/usr/local/mysql/bin/mysql'.
+-参考リンク
+--[[MySQL 5.0 Reference Manual (2.5. Installing MySQL on Mac OS X):http://dev.mysql.com/doc/refman/5.0/en/mac-os-x-installation.html]]</p>
+<p>&amp;aname(QEMU);
+**QEMU [#p188a69a]
+-Mac OS X 向けQEMU、[[Q:http://www.kberg.ch/q/]]をインストール。
+-ディスクイメージは[[FreeOSZoo:http://free.oszoo.org/download.html]]からダウンロードできる。
+-QEMUモニターを表示するには、Ctrl-Alt-2を同時に押す。Ctrl-Alt-1で元に戻る。
+ QEMU 0.7.1 monitor - type 'help' for more information
+ (qemu) info kqemu
+ kqemu support is not compiled
+ (qemu)
+-Ctrl-AltをゲストOSに送る場合は、QEMUモニターを使う。
+ (qemu) sendkey ctrl-alt-delete
+-参考リンク。
+--[[QEMU on Windows:http://www.h7.dion.ne.jp/~qemu-win/index-ja.html]]</p>
+<p>&amp;aname(Rails);
+**Ruby on Rails [#d93ce2d2]
+-Ruby on Rails のオールインワンパッケージ、[[Locomovite:http://locomotive.sourceforge.net/]]をインストール。
+-RoR用IDE、[[RadRails:http://www.radrails.org/]]をインストール。
+-参考リンク
+--[[もしかしたら連載: Ruby on Rails on MacOSXでWebアプリ開発〜第一回 環境構築〜:http://blog.matake.jp/archives/_ruby_on_rails.html]]</p>
+<p>&amp;aname(hyperestraier);
+<strong>Hyper Estraier [#z76f2ea2]
+-全文検索システム[[Hyper Estraier:http://hyperestraier.sourceforge.net/index.ja.html]]をインストール。
+--まずは、[[QDBM:http://qdbm.sourceforge.net/index.ja.html]]をインストール。
+ $ ./configure --enable-zlib
+ $ make mac
+ $ make check-mac
+ $ sudo make install-mac
+なお、アンインストールする場合は以下の通り。
+ $ sudo make uninstall-mac
+--続いて、[[Hyper Estraier:http://hyperestraier.sourceforge.net/index.ja.html]]をインストール。
+ $ ./configure
+ $ make mac
+ $ make check-mac
+ $ sudo make install-mac
+なお、アンインストールする場合は以下の通り。
+ $ sudo make uninstall-mac
+-設定。
+--ホームディレクトリのパーソナル Web 共有用のディレクトリにHyper Estraier用のディレクトリを作る。（参考リンク[[jm@foo 2005年09月17日 Hyper Estraierでメール検索:http://minken.net/mt/archives/cat_os_x.html]]）
+ $ mkdir ~/Sites/Estraier
+その中にGyazMail用のディレクトリを作る。
+ $ mkdir ~/Sites/Estraier/GyazMail
+ $ cd ~/Sites/Estraier/GyazMail
+GyazMailのメールボックスをリンク。
+ $ ln -s ~/Library/Application? Support/GyazMail .
+Hyper Estraierのインデックスを作成。
+ $ estcmd gather -il ja -sd -fm casket ./GyazMail
+検索用CGIその他をコピー。
+ $ cp /usr/local/libexec/estseek.cgi .
+ $ cp /usr/local/share/hyperestraier/locale/ja/estseek.* .
+estseek.conf の以下の行を編集
+ lprefix: file:///Users/jiro/Library/Application%20Support/
+ gprefix: http://localhost/%7Ejiro/Estraier/GyazMail/
+上で作ったディレクトリでCGIが実行できるようにapacheの設定を追加。
+ $ vi /etc/httpd/users/estraier.conf
+中身は以下。
+ <Directory /Users/*/Sites/Estraier>
+ AllowOverride None
+ Options ExecCGI FollowSymLinks
+ AddHandler cgi-script .cgi
+ Order deny,allow
+ Deny from all
+ Allow from localhost
+ </Directory>
+apacheを再起動。システム環境設定→共有→パーソナル Web 共有で、停止して開始、でもいいし、
+ $ sudo apachectl restart
+でもいい。これで
+ http://localhost/~jiro/Estraier/GyazMail/estseek.cgi
+にアクセスするとGyazMailの全文検索ができるようになった。
+ただしOS Xのデフォルトのパーミッションだと検索結果のそれぞれのファイルをクリックしても読めないので、ちょっと嫌だが
+ $ chmod 701 ~/Library
+ $ chmod 701 ~/Library/Application? Support
+あとはインデックスが自動更新されるようにcronを設定
+ $ vi ~/Sites/Estraier/cron
+ #!/bin/sh
+ /usr/local/bin/estcmd gather -cl -il ja -sd -cm -fm
+ /Users/jiro/Sites/Estraier/GyazMail/casket
+ /Users/jiro/Sites/Estraier/GyazMail/GyazMail
+ /usr/local/bin/estcmd purge -cl /Users/jiro/Sites/Estraier/GyazMail/casket
+ $chmod 755 ~/Sites/Estraier/cron
+/etc/crontab に以下の行を追加。
+ 5 0 * * * /Users/jiro/Sites/Estraier/cron
+以上。
+</strong>ゲーム [#o1d8ffec]
+-[[Tux Racer:http://tuxracer.sourceforge.net/index.html]]</p>
+<p>&amp;aname(macmini);
+<em>Mac mini覚え書き [#f4da35a4]
+</em>*周辺機器 [#n0b87caa]
+- [[GH-MM-HD:http://www.green-house.co.jp/products/mac/index.html]] - Mac mini本体と同一形状のハードディスク（ケース）。</p>
+<p>&amp;aname(macbook);
+<em>MacBook覚え書き [#pc81323d]
+</em>*起動しなくなった [#p8f97c2b]
+- 電源投入時に警告メッセージ（電源断orリセットする旨）で止まる。
+- Boot Camp に Windows XP をインストール。Parallels Desktop for Mac Build 3036 Beta でBoot Camp パーティションからWindows XPを起動中、無反応になった。直前の作業は、共有フォルダ設定、自動更新のインストール、全画面からの戻し。
+- バッテリ外して電源５秒押し、PRAMクリア数回実施するも、起動しない。 
+- 起動時option押しで、Boot Camp パーティションを指定するとファイルが壊れていて起動しない。
+- CD起動は選べるが、読み込んだ後に同じ警告メッセージが出て先に進めない。OSX再インストールも不可。
+- Sofmap PCクリニック（新宿）に持ち込み。初期不良なので即日交換してくれた。Good。</p>
+<p>&amp;aname(parallels);
+<em>[[Parallels Desktop:http://www.parallels.com/]] [#ff1e0137]
+</em>*ダウンロード [#nce16c8c]
+-15日間の試用版[[ダウンロード:http://www.parallels.com/en/download/desktop/]]が可能。
+-[[Parallels Desktop for Mac日本語版:http://www.proton.co.jp/products/parallels-mac/index.html]]
+-[[Parallels desktop β版:http://pc.watch.impress.co.jp/docs/2006/1206/parallels.htm]]
+--[[ダウンロード:http://forums.parallels.com/thread5997.html]]。
+--Parallels desktop を[[Boot Camp パーティションから起動する:http://dotmb.netwalk.in/?eid=302753]]。 
+-[[VMware for Mac Beta:http://www.vmware.com/products/beta/fusion/]]もダウンロード可能になった。試用には登録が必要。</p>
+<p>**キーボード環境の改善 [#q59389e4]
+-トラックパッドでの右クリック設定
+--[システム環境設定] - [キーボードとマウス] -「副ボタンのクリックの代わりにトラックパッドに 2 本指を触れてボタンをクリック」をオン。
+-[[CmdSpace:http://www.h5.dion.ne.jp/~pollux/]] - [command] + [space]で日本語入力を切り替える
+-[[OS X ハッキング! 第186回 Parallels Desktop for Macのキーボードを考える:http://journal.mycom.co.jp/column/osx/186/]] - 手軽さを優先するなら「[[AppleKbWin:http://www.geocities.jp/funchi_soft/]]」</p>
+<p>**関連ソフトウェア [#g3667f7a]
+-[[VirtueDesktops:http://www.virtuedesktops.info/]] - 複数デスクトップを切り替えて使うソフトウェア。VMの切り替えに使うと便利。</p>
+<p>&amp;aname(BootCamp);
+<em>BootCamp [#b0d7e463]
+</em>*[[Macの外付けHDDにWindows10をインストール:http://niwkr.blog.jp/archives/50481040.html]] [#x4ff492c]
+-Windows10用の外付けHDDと上記のUSBインストールディスクを挿して再起動。
+-Optionを押してWindowsを選択しUSBインストールディスクを起動する。
+-インストール画面が出るがShift＋F10でコマンドウィンドウを開く。
+-コマンドラインより入力する。
+ diskpart   ディスクユーテリティを起動する
+ list disk  容量を見て外付けHDDのディスクNoを確認する。（重要）
+ select disk 1  この場合1が外付けHDDを表す。各自の環境に合わせて下さい。
+ list disk  ＊の位置を確認する。セレクトしたディスクに＊が付いている。
+ clean  これで＊が付いたHDDが初期化される。
+ convert gpt    GPTにする。
+ create partition efi size=256  256MBをEFIに充てる。
+ format fs=fat32 quick label="EFI"  FAT32にフォーマットしてラベルをEFIとする。
+ assign letter=S    Sドライブに指定する。
+ create partition primary size=300000   300GBをWindows用に確保。
+ format fs=ntfs quick label="Windows"   NTFSにフォーマットしてラベルをWindowsとする。
+ assign letter=I    Iドライブに指定する。
+ create partition primary   残りをMac用にする。ここはそれぞれの使い方に合わせて。サイズを省略すると残り全てが割り当てられる。
+ format fs=exfat quick label="MacHD"    ExFATフォーマットしてラベルをMacHDとする。※後でMacのディスクユーティリティで消去してMac OS拡張（ジャーナリング）にする。
+ list volume        設定したボリュームの確認が出来る。Windowsに割り当てられたドライブ名（I）とEFI（S）とUSBインストールディスク（D）を確認する。それぞれのドライブ名は各自の設定と環境で異なるので確認して下さい。
+ exit   ディスクユーティリティから抜ける。
+ cd x:¥windows¥system32
+ dism /get-wiminfo /wimfile:D:¥sources¥Install.wim  DがUSBインストールディスクの場合これでインストールするindex Noを見る。Pro(1) or Home(2)など。
+ dism /apply-image /imagefile:D:¥sources¥Install.wim /index:1 /applydir:I:¥ インデックスNo1をIドライブにインストール。時間が掛かります。100%まで待ちましょう。
+ bcdboot I:¥windows /s S: /l ja-jp /f UEFI  Sドライブに起動ドライブIの情報を書き込む
+ exit   コマンドラインを終了する。</p>
+<p>-USBインストールディスクを抜く。
+-Windows10のインストールウインドウの右上をクリックして終了させる。
+-再起動してOptionを押す。EFI bootが表示されるので選んで起動。
+-全ての設定が終わってWindows10が起動したらUSBインストールディスクを挿して下さい。
+-これでWindows10が外付けHDDからの起動で使えます。（Option起動）
+-MacHDはMacのディスクユーティリティよりMacHDを選んで消去。その時にフォーマット形式をMac OS拡張（ジャーナリング）にする。
+-Install.wimはInstall.esdでも可。</p>
+<p><strong>[[新しいパーティションを作成できなかったか、既にあるパーティションが見つかりませんでした:https://qiita.com/tarosuke@github/items/a593fd091cbbc3f2ba8b]] [#e6af343b]
+</strong><em>原因 [#e88311e9]
+リムーバブルでないストレージとして認識されるリムーバブルドライブがあること。パーティショナーはドライブレターで認識しているのでそういうストレージが認識されてるとドライブレターがずれて認識できなくなる。
+</em><em><em>対策 [#b6992f6c]
+USBメモリでインストールしている場合の対策。
+ パーティションを切る(ここまでは普通に)
+ Shift-F10を押してコマンドプロンプトを出す
+ diskpart
+ list diskでドライブ一覧を表示
+ select disk xでインストール先のドライブを選択(xはドライブ番号)
+ list partitionでパーティション一覧を表示
+ select partition xでパーティションを選択(xはパーティション番号)
+ activeでそのパーティションから起動できるようにする
+ assignでパーティションにドライブレターを与える
+ list volumeでドライブレターを見る(インストール先とインストーラが入ってるストレージのドライブレターを覚えておく。以後仮にインストーラをX、インストール先をYとしておく)
+ exit
+ xcopy X:</em>.</em> Y:\ /s /e /f
+ exit
+ インストーラのストレージを外して再起動(起動ドライブはインストール先)
+ インストーラが起動するのでそのままインストール
+インストール先パーティションにインストーラをコピーするのがキモ。</p>
+<p>**Windows10ドライバのインストール [#s62cd2ec]
+-[[Boot CampのWindowsサポートソフトウェアを再インストール:https://renderseed.link/inome/2018/ht204923/]]
+ 「アクション」＞「Windowsサポートソフトウェアをダウンロード」をクリックし、保存先のパスを指定すると「WindowsSupport」フォルダが作られます。</p>
+<p>**関連サイト [#x8f9b4b1]
+-[[Boot Camp サポート:https://support.apple.com/ja-jp/boot-camp]]
+--[[Boot Camp を使って Mac で Windows 10 を使う:https://support.apple.com/ja-jp/HT204990]]
+--[[Boot Camp で Windows を実行しているときに Mac の一部の機能が働かない場合:https://support.apple.com/ja-jp/HT204923]]
+-[[容量節約！iMacやMacBookのBootcampで外付けHDDへWindowsをインストールする方法:http://blog.mokosoft.com/entry/2015/12/22/141933]]
+-[[Macの外付けHDDにWindows10をインストール:http://niwkr.blog.jp/archives/50481040.html]]</p>
+<p>&amp;aname(dashboad);
+*Dashboad Widgets [#fc93015d]
+-[[Wikipedia Widget:http://www.whatsinthehouse.com/widgets/]] - オンライン百科事典Wikipedaを参照するウィジット。
+-[[Capture:http://www.vanillasoap.com/widgets/all.html]] - スクリーンキャプチャ
+-[[空模様:http://www.cyanworks.net/dboardSoraMoyo.html]] - 天気予報。気象庁のデータを取得出来る。
+-[[Sidekick Dictionary:http://veadardiary.blog29.fc2.com/blog-entry-999.html]] - 英和、和英、国語辞典。
+-[[rsyncw:http://miwa.offside.ne.jp/downloads/rsyncw.html]] - rsync, ファイルを効率よく同期できる。</p>
+<p>&amp;aname(safari);
+*Safari拡張 [#zf2377bf]
+-[[SafariStand:http://hetima.com/]] - Safariに機能追加
+--インストール
+---SIMBLプラグインとしてインストールするため、まず[[SIMBL:http://culater.net/software/SIMBL/SIMBL.php]]をインストール。
+---SafariStand フォルダのSafariStand.bundleを SIMBL のプラグインフォルダ/Library/Application Support/SIMBL/Plugins/SafariStand.bundle に入れる。
+--推奨設定
+---General→[gifアニメーションを無効にする]、[ターゲットリンクをタブで開く]
+-[[PicLens:http://www.piclens.com/mac/en/]] - 全画面でイメージ検索（safari専用）</p>
+<p>&amp;aname(application);
+*その他メモ [#a5af610e]
+-[[MplayerOSX:http://mplayerosx.sourceforge.net/]]
+--[[【コラム】OS X ハッキング! 第74回 OS Xの動画環境を整理する(1):http://pcweb.mycom.co.jp/column/osx/074/]]
+-[[NeoOffice/J:http://www.planamesa.com/neojava/ja/]]
+-[[Windows Media Player 9 for Mac OS X:http://www.microsoft.com/japan/windows/windowsmedia/software/macintosh/osx/default.aspx]]
+-VNC
+--[[VNCサーバ OSXvnc:http://www.redstonesoftware.com/vnc.html]] (vine server)
+--[[VNCビューア VNCdimension:http://www.mdimension.com/cgi-bin/WebObjects/mDimension.woa/wa/software]]
+--[[Chicken of the VNC:http://www.macupdate.com/info.php/id/9517]]
+-[[OS X Package Manager:http://www.osxgnu.org]]
+-Emacs - [[Carbon Emacsパッケージ:http://homepage.mac.com/zenitani/emacs-j.html]]
+--[[Emacs21 on Mac入門から中毒まで:http://sakito.s2.xrea.com/detail/emacs/emacs21.html]]
+--[[MacWiki - Carbon Emacs:http://macwiki.sourceforge.jp/cgi-bin/wiki.cgi?CarbonEmacs]]
+--[[【コラム】OS X ハッキング! 第83回 Carbon Emacsの設定(4) :http://pcweb.mycom.co.jp/column/osx/083/]]
+-[[Azureus:http://azureus.sourceforge.net/]] - Java BitTorrent Client
+-[[ClamXav:http://www.clamxav.com/]]
+-[[KeePass:http://keepass.sourceforge.net/download.php]] - パスワード管理ソフト
+-[[UnRarX:http://www.unrarx.com/]]
+-[[iTerm:http://iterm.sourceforge.net/]] - タブ式ターミナル</p>
+<p>//-[[OSX-NAVI:http://osx-navi.main.jp/]] - Mac OS X 専門のソフトウェア検索サイト
+-[[お気に入りのアプリケーション:http://favorite-app.net/]]
+--[[MPlayer:http://www.mplayerhq.hu/design7/news.html]] - aviの再生が可能なムービープレイヤー
+--[[Movie Time:http://www.sansworks.com/]] - フルスクリーンで再生できるQuickTimeプレイヤー
+--[[CocoaMovieBrowser:http://homepage.mac.com/kitanin/cmb.html]] - プレイリスト機能付きムービープレイヤー
+--[[Perian:http://perian.org/]] - QuickTimeでDivx、FLVを再生するプラグイン
+--[[FFusion:http://aldorandenet.free.fr/codecs/]] - QuickTimeで主要なaviの再生が可能になる
+--[[PictPicker:http://www.geocities.jp/kwhr0/]] - ZIPファイルにも対応した高速画像ビューア
+--[[SwiftSlideShow:http://homepage.mac.com/yhanda/soft.html]] - メモリを大量に使用するかわりに高速に画像を切り替える画像ビューア。
+--[[BlueSkyReader:http://hp.vector.co.jp/authors/VA019952/]] - 縦書きに対応した電子書籍用の簡易ブラウザ。青空文庫に対応。</p>
+<p>-[[Mac買ったらすぐにいれるフリーソフトウェア まとめ Wiki:http://wiki.fdiary.net/mac2ch/]]
+--[[Magic Lantern:http://soulcrushingjob.com/archives/cat_magic_lantern.php]] - 画像ビューア
+--[[VitaminSEE:http://www.elliotglaysher.org/vitaminsee]] - 高速画像ビューア
+--[[Lupin:http://lupin.sourceforge.jp/index.php?FrontPage]] - アーカイバ
+--[[Flip4Mac WMV:http://www.flip4mac.com/]] - WMVファイルをQuickTimeで再生するプラグイン
+--[[Google Notifier for Mac:http://mail.google.com/mail/help/notifier/notifier_mac.html]] - Gmailの着信を知らせる</p>
+<p>-[[Macの手書き説明書:http://veadardiary.blog29.fc2.com/blog-entry-905.html]]
+--[[uApp:http://www.eagle-of-liberty.com/uapp/index_en.php]] - アプリケーションのアンインストール
+--[[xPad:http://getxpad.com/]] - シンプルなメモ帳
+--[[Punakea:http://www.nudgenudge.eu/punakea]] - ありとあらゆるファイルをタグ付け
+--[[URLcollector:http://veadardiary.blog29.fc2.com/blog-entry-140.html]] - 万能ダウンローダ
+--[[The Unarchiver:http://veadardiary.blog29.fc2.com/blog-entry-661.html]] - ほとんどの圧縮形式を解凍可能なソフト
+--[[Phoenix Slides:http://veadardiary.blog29.fc2.com/blog-entry-405.html]] - ファイルブラウザ付き画像ビューア
+--[[LiquidCD:http://veadardiary.blog29.fc2.com/blog-entry-203.html]] - CD/DVDライティングアプリ
+--[[FolderGlance:http://veadardiary.blog29.fc2.com/blog-entry-923.html]] - コンテクストメニューから目的の階層のファイル、フォルダにアクセス</p>
+<p>-[[OSX Freeware:http://www16.plala.or.jp/x-tomo/]]
+--[[FFView:http://www.feedface.com/software/ffview.html]] - OpenGLベースの画像ビューア
+--[[Galerie:http://www.myriad-online.com/en/products/galerie.htm]] - iPhoto選択画像でギャラリーHTML作成</p>
+<p>-[[MacFan net:http://macfannet.mycom.co.jp/mf/index.html]]
+--[[Zipeg:http://www.zipeg.com/]] - zip,7z,rar,bz2,gz,tgz,tar,arj,lzh,z,cab,chmに対応するファイルユーティリティ。アーカイブファイルの閲覧、ドラッグ＆ドロップによる展開ができる</p>
+<p>-[[新しもの好きのダウンロード:http://mac.page.ne.jp/]]</p>
+<p>-[[Mac.EGOism.jp:http://mac.egoism.jp/]]</p>
+<p>-[[Quicksilver:http://quicksilver.blacktree.com/]] - キー操作でアプリケーションを起動。
+--[[QuicksilverでSpotlightコメントを:http://www.sumainobaiten.com/blog/zakki/archives/2006/12/quicksilverspot.html]] - File Tagging Module
+--[[Quicksilverでいろいろやってみた:http://un-q.net/2007/02/quicksilver_1.html]]
+ プラグインから「File Tagging Module(+)」追加
+ 1, タグ付けしたいファイルを選択
+ 2, Quicksilver起動
+ 3, cmd+g で選択していたファイルをQuicksilverで選択
+ 4, tabでアクションへ
+ 5, Add Tags...
+ 6, ファイルの「Spotlightコメント」に「@タグ名」が追加される
+-[[iXiu:http://www.insist.nl/]] - menu barに収納できるランチャー
+-[[buler:http://www.manytricks.com/butler/]] - カスタマイズ性の高い多機能ランチャー
+-[[iStumbler:http://www.istumbler.net/]] - 無線アクセスポイントを管理
+-[[stellarium:http://www.stellarium.org/]] - [[デスクトップでプラネタリウム:http://gigazine.net/index.php?/news/comments/20060513_stellarium/]]
+-[[FinderPop:http://sukechan.blog1.fc2.com/blog-entry-377.html]] - コンテクストメニュー機能を拡張する環境設定パネル
+--[[Osamu Sato's Web Page（ローカライズ作者、FinderPop掲示板あり）:http://www.connectworks.jp/localize/]]
+--[[FinderPop 2.0.1（FinderPopの紹介）:http://pisces-319.seesaa.net/article/32020312.html]]
+ コンテキストメニュー表示中に
+ command または r: オリジナルの表示
+ command+option または i: 情報を表示
+ command+shift+option または p: プレビューを表示
+ control+command+option または delete: ゴミ箱
+ TAB: Infoウィンドウ表示
+-[[PicNavi:http://hp.vector.co.jp/authors/VA023466/picnavi.html]] - ショートカット、見開きに対応したビューア
+-[[ゲッター１:http://hccweb1.bai.ne.jp/ili/getter1.html]] - 分割・D&amp;Dに対応したダウンロード支援ツール
+-[[NicePlayer:http://niceplayer.sourceforge.net/]] - シンプルな動画ビューア
+-[[ShieldUp!:http://web.mac.com/tomohiko/iWeb/THE%20POOH%20FILES/SheildUp%21.html]] - 半透明のシールドでスクリーンを保護する簡易セリュリティツール
+-[[JustLooking:http://d.hatena.ne.jp/harurin/20070531/p4]] - アプリケーションウィンドウにD&amp;Dできる画像ビューア</p>
+<p>*添付ファイル [#x2c850e8]</p>
+<h1 id="attach">attach()</h1></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

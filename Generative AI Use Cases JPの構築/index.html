@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Generative AI Use Cases JPの構築 - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">コンテンツ一覧</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../AWS%20Tips/" class="nav-link">AWS Tips</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CentOS/" class="nav-link">CentOS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DOALR/" class="nav-link">DOALR</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DOCKER%E3%81%AE%E8%A8%AD%E5%AE%9A/" class="nav-link">DOCKERの設定</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Generative AI Use Cases JPの構築</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../MacOSX/" class="nav-link">MacOSX</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Skyrim/" class="nav-link">Skyrim</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../SkyrimATF/" class="nav-link">SkyrimATF</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../debian/" class="nav-link">Debian</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../skyrimSE/" class="nav-link">skyrimSE</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../DOCKER%E3%81%AE%E8%A8%AD%E5%AE%9A/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../MacOSX/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>[[FrontPage]]</p>
+<p><em>Generative AI Use Cases JPの構築 [#qfe7297d]
+</em>*環境準備 [#x0544289]
+-手元の環境で必要なもの（WSL2で準備済み）
+ AWSアカウント
+ AWS CLI
+ AWS CDK
+ npm
+-リポジトリ準備
+ git clone https://github.com/aws-samples/generative-ai-use-cases-jp.git
+ cd generative-ai-use-cases-jp
+-デプロイするリージョンを環境変数で指定（バージニア北部 us-east-1）
+ export AWS_REGION=us-east-1
+ --&gt; export AWS_REGION=us-west-2
+-リポジトリのルートで実行
+ npm ci
+-（初回のみ、CDKを使ったことがない場合）Bootstrap を行う
+ npx -w packages/cdk cdk bootstrap
+-最後にデプロイを実行（20～30分かかる）
+ npm run cdk:deploy
+-CloudFormation Stacks を確認、GenerativeAiUseCasesStackが追加されているはず
+-CloudFormationでGenerativeAiUseCasesStackのOutputsタブを開き、WebUrl のリンクを開く。
+-アカウントを作成し、利用する</p>
+<p>-参考リンク
+--[[Github generative-ai-use-cases-jp:https://github.com/aws-samples/generative-ai-use-cases-jp]]
+---[[ネイティブアプリのように利用する方法:https://github.com/aws-samples/generative-ai-use-cases-jp/blob/main/docs/PWA.md]]
+--[[Generative AI Use Cases JP をデプロイしてチャットを触ってみた:https://qiita.com/wasashi/items/76642d6a864ee7dafd29]]
+--[[AWSのGenUを試してみました。自社専用の生成AI利用システムが手軽に作れる！:https://biz.addisteria.com/aws_genu/]]</p>
+<p><strong>インストールがうまくいかない場合 [#v65e8626]
+-nvmのインストールと更新
+ $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+ $ sourece ~/.bashrc
+-nvmのインストールを確認
+ $ command -v nvm
+-Nodeの最新バージョンをインストール
+ $ nvm install node
+-AWS CLI設定方法
+--AWS CLIを初回利用するときのConfigure設定方法（CLIを実行するためのIAMアクセスキーを事前準備しておく）
+ $ aws configure
+--入力項目。準備したIAMのアクセスキーとシークレットキーを入力する
+ AWS Access Key ID [</strong><strong><em>*</em></strong><strong><em>*</em></strong>xxxx]:
+ AWS Secret Access Key [<strong><em>*</em></strong><strong><em>*</em></strong>**xxxx]:
+ Default region name [None]: ap-northeast-1
+ Default output format [None]: json</p>
+<p>-参考リンク
+--[[Github nvm:https://github.com/nvm-sh/nvm]]
+--[[Node.jsのバージョンをアップグレードする方法:https://qiita.com/takokke/items/df01818d65a0d4b1da90]]
+--[[Node と NPM を最新バージョンに更新する方法:https://www.freecodecamp.org/japanese/news/how-to-update-node-and-npm-to-the-latest-version/]]
+--[[AWS CLIを使用するためのconfigure設定方法:https://qiita.com/Kiyonchu/items/9b2f60e912a295c9261c]]</p>
+<p>**セキュリティ強化 [#xe085a48]
+-セルフサインアップを無効化する
+--context の selfSignUpEnabled に false を指定します。(デフォルトは true)
+--packages/cdk/cdk.json を編集
+ {
+   "context": {
+     "selfSignUpEnabled": false,
+   }
+ }
+--設定変更後に以下を実行して変更内容を反映させる
+ $ npm run cdk:deploy </p>
+<p>-参考リンク
+--[[Github generative-ai-use-cases-jp:https://github.com/aws-samples/generative-ai-use-cases-jp]]</p>
+<p>**モデル追加 [#zf6a7719]
+-modelIdsを変更
+--packages/cdk/cdk.json を編集
+    "modelRegion": "us-west-2",
+    "modelIds": [
+      "anthropic.claude-3-5-haiku-20241022-v1:0",
+      "anthropic.claude-3-5-sonnet-20241022-v2:0",
+      "anthropic.claude-3-5-sonnet-20240620-v1:0",
+      "anthropic.claude-3-sonnet-20240229-v1:0"
+    ],
+    "imageGenerationModelIds": [
+      "amazon.titan-image-generator-v2:0",
+      "amazon.titan-image-generator-v1",
+      "stability.stable-diffusion-xl-v1",
+      "stability.sd3-large-v1:0",
+      "stability.stable-image-core-v1:0",
+      "stability.stable-image-ultra-v1:0"
+    ],</p>
+<p>-参考リンク
+--[[バージニア北部で利用可能なモデル:https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/modelaccess]]</p>
+<p>**ブラウザ拡張機能 [#f61c5ba4]
+-準備
+--AWS CDKの出力をテキストファイルにメモ（コピー）しておく
+ (前略)
+ GenerativeAiUseCasesStack.ApiEndpoint = https://xxxx.execute-api.{region}.amazonaws.com/api/
+ (中略)
+ GenerativeAiUseCasesStack.IdPoolId = {region}:xxx-xxx-xxx-xxx-xxx
+ (中略)
+ GenerativeAiUseCasesStack.PredictStreamFunctionArn = arn:aws:lambda:{region}:{account}:function:GenerativeAiUseCasesStack-APIPredictStreamxxx-xxx
+ (中略)
+ GenerativeAiUseCasesStack.Region = {region}
+ (中略)
+ GenerativeAiUseCasesStack.UserPoolClientId =xxx
+ GenerativeAiUseCasesStack.UserPoolId = {region}_xxxx
+ (後略)
+--generative-ai-use-cases-jp/browser-extension/src/.env を開き、メモしておいた内容を転記する
+ VITE_APP_REGION=Region の値
+ VITE_APP_USER_POOL_ID=IdPoolId の値
+ VITE_APP_USER_POOL_CLIENT_ID=UserPoolClientId の値
+ VITE_APP_IDENTITY_POOL_ID=IdPoolId の値
+ VITE_APP_PREDICT_STREAM_FUNCTION_ARN=PredictStreamFunctionArn の値
+ VITE_APP_API_ENDPOINT=ApiEndpoint の値
+--環境情報を転記した後、generative-ai-use-cases-jp/ ディレクトリで以下のコマンドを実行
+ $ npm run extension:ci
+ $ npm run extension:build
+--generative-ai-use-cases-jp/browser-extension/ に dist/ というディレクトリが出来上がる。これが拡張機能のパッケージ本体となる。
+-ブラウザ拡張機能のインストール
+--Chrome に拡張機能をインストールする方法
+---メニューから「設定」をクリックし
+---次に左のペインから「拡張機能」をクリック
+---最後に左上に表示される「パッケージ化されていない拡張機能を読み込む」をクリック
+---先程の npm run extension:build コマンドで生成した dist ディレクトリを選択（インストール完了）</p>
+<p>-参考リンク
+--[[Github generative-ai-use-cases-jp ブラウザ拡張機能:https://github.com/aws-samples/generative-ai-use-cases-jp/blob/main/browser-extension/README.md]]
+--[[無茶振りは生成 AI に断ってもらおう~ ブラウザに生成 AI を組み込んでみた ~:https://aws.amazon.com/jp/builders-flash/202405/genai-sorry-message/]]</p>
+<p>**ネイティブアプリのように利用する [#xb939ea4]
+--デプロイした Web の URL にアクセスするとアドレスバー右のインストールボタンが表示されるので、クリックしてインストールする。 </p>
+<p>-参考リンク
+--[[ネイティブアプリのように利用する方法:https://github.com/aws-samples/generative-ai-use-cases-jp/blob/main/docs/PWA.md]]</p>
+<p>**アップデート方法 [#wfa1c9a7]
+-main ブランチを pull する。
+すでにリポジトリを clone 済みで、初回デプロイが完了していることを想定
+ $ git pull
+-再デプロイする。
+Bootstrap は必要なし、パッケージがアップデートされている可能性があるため、npm ci コマンドは実行
+ npm ci
+ npm run cdk:deploy</p>
+<p>-参考リンク
+--[[アップデート方法(Github):https://github.com/aws-samples/generative-ai-use-cases-jp/blob/main/docs/UPDATE.md]]</p>
+<p><em><em>GenU環境のクリーンアップ（削除） [#y669c906]
+-GenU のリソースを削除、10分程かかる
+ $ npm run cdk:destroy
+--必要あれば、GenUに関連するS3バケットを空にし、削除する
+--CDKのBootstrapで作成されたCloudFormation Stackも、不要であれば削除する
+-GenUの解体は、以下でも可能。オプション設定を追加していると複数のスタックが作られるため、削除するスタックを指定する必要があるが、ここでアスタリスク"</em>"指定することですべてのスタックを削除することができる。
+ $ npm run cdk:destroy "</em>"</p>
+<p>-参考リンク
+--[[Generative AI Use Cases JP をデプロイしてチャットを触ってみた:https://qiita.com/wasashi/items/76642d6a864ee7dafd29]]
+--[[GenUを構築してみた(後編):https://zenn.dev/oka_yama/articles/5b574ef27f3718]]</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

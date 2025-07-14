@@ -1,36 +1,36 @@
 [[seta.go.dyndns.org]]
 
-*目次 [#iecc6bf4]
+#目次 
 #contents
 
-*Mac OS X 覚え書き [#pea532b5]
-**MacでWindowsキーボードを使う - Karabiner-Elements [#ybbbc530]
--[[MacでWindows用キーボードを使用する方法（High Sierraにも対応）:https://creative89.com/2017/05/27/how-to-use-windows-keyboard-on-mac/#Karabiner-Elements]]
-|From key|To key|h
+#Mac OS X 覚え書き 
+##MacでWindowsキーボードを使う - Karabiner-Elements 
+-[MacでWindows用キーボードを使用する方法（High Sierraにも対応）](https://creative89.com/2017/05/27/how-to-use-windows-keyboard-on-mac/#Karabiner-Elements)
+|From key|To key|
 |PCキーボードの無変換キー|英数キー|
 |PCキーボードの変換キー|かなキー|
 |pause|eject|
 macをスリープさせるショートカット:「command+alt+eject」
 
-**文字入力 [#lc403113]
-|文字|入力|h
+##文字入力 
+|文字|入力|
 |バックスラッシュ|Option + \|
 |円記号|Option + y|
-***emacs [#gd8e6876]
-|不具合|対処|h
+###emacs 
+|不具合|対処|
 |SpotlightメニューにCtrl+Spaceを取られる|システム環境設定で変更（Ctrl+Option+Space）|
 |Metaキーが効かない|Aquamacs Options→Option key→meta 又は command+;|
 |Butlerの「iTunes情報」「省略名を入力」が起動してしまう|Butlerの該当機能を削除|
 
-***SKK [#f0e4adba]
+###SKK 
 -AquaSKK
---[[AquaSKK:http://aquaskk.sourceforge.jp/]] （辞書は[[SSK Open Lab:http://openlab.jp/skk/index-j.html]]からダウンロード）、[[AquaSKK Pathch Project:http://homepage.mac.com/t.suwa/aquaskk/]]
+--[AquaSKK](http://aquaskk.sourceforge.jp/) （辞書は[SSK Open Lab](http://openlab.jp/skk/index-j.html)からダウンロード）、[AquaSKK Pathch Project](http://homepage.mac.com/t.suwa/aquaskk/)
 -SKKその他
---[[ようこそ、SKK Openlab へ:http://openlab.ring.gr.jp/skk/index-j.html]]
---[[SKKで正字正かな:http://kstn.fc2web.com/skk_seikana.html]]
+--[ようこそ、SKK Openlab へ](http://openlab.ring.gr.jp/skk/index-j.html)
+--[SKKで正字正かな](http://kstn.fc2web.com/skk_seikana.html)
 
 &aname(Option);
-**起動ディスクの選択 [#ef2ec507]
+##起動ディスクの選択 
 -option キーを押しながらコンピュータを再起動する。利用できる起動ディスクが表示されるので、そこで選択する。
 -「システム環境設定」を開き、
 ++「起動ディスク」をクリック。
@@ -39,7 +39,7 @@ macをスリープさせるショートカット:「command+alt+eject」
 
 -Option＋"T"キーで、ターゲットディスクモードとして起動できる。
 
-|電源入時押下キー|機能|h
+|電源入時押下キー|機能|
 |[Option]|起動ディスク選択|
 |[Shift]|セーフモードで起動|
 |[Cmd]+V|ブートメッセージをコンソール表示して起動|
@@ -53,39 +53,39 @@ macをスリープさせるショートカット:「command+alt+eject」
 |[Option]+[Cmd]+P+R|PRAMクリア|
 |マウスボタン押下|CD(DVD)排出|
 
-**CDを取り出せないとき [#gc4f2aa3]
--[[ほかの方法で取り出せないディスクを取り出す:http://docs.info.apple.com/article.html?path=Mac/10.4/jp/mh1750.html]]
+##CDを取り出せないとき 
+-[ほかの方法で取り出せないディスクを取り出す](http://docs.info.apple.com/article.html?path=Mac/10.4/jp/mh1750.html)
 
-**PRAMクリア [#dacf4bcf]
+##PRAMクリア 
 -「command」,「option」，「P」および「R」キーを押しながら起動する。2回目の起動音を確認したらキーから指を放す。
 
-**PMUリセット [#p140b3c4]
+##PMUリセット 
 MacBook、MacBook Pro
-+ コンピュータがオンになっている場合は、電源を切ります。
-+ AC アダプタとコンピュータのバッテリーを取り外します。
-+ 電源ボタンを 5 秒間押したままにしてから、ボタンを放します。
-+ バッテリーと AC アダプタを再度取り付けます。
-+ 電源ボタンを押してコンピュータを再起動します。
+- コンピュータがオンになっている場合は、電源を切ります。
+- AC アダプタとコンピュータのバッテリーを取り外します。
+- 電源ボタンを 5 秒間押したままにしてから、ボタンを放します。
+- バッテリーと AC アダプタを再度取り付けます。
+- 電源ボタンを押してコンピュータを再起動します。
 
 -参考リンク
---[[PMU のリセットについて:http://tokyo.secret.jp/macs/pmu-mac-reset.html]]
---[[ アップル製ポータブルコンピュータの SMC (System Management Controller) をリセットする方法:http://support.apple.com/kb/HT1411?viewlocale=ja_JP]]
+--[PMU のリセットについて](http://tokyo.secret.jp/macs/pmu-mac-reset.html)
+--[ アップル製ポータブルコンピュータの SMC (System Management Controller) をリセットする方法](http://support.apple.com/kb/HT1411?viewlocale=ja_JP)
 
-**システムのバックアップ [#n5a3ddf5]
--[[再インストールの準備１---システムのバックアップ:http://tokyo.secret.jp/macs/backup.html]]
--[[Carbon Copy Cloner:http://homepage.mac.com/tnakamula/appccc.html]]
+##システムのバックアップ 
+-[再インストールの準備１---システムのバックアップ](http://tokyo.secret.jp/macs/backup.html)
+-[Carbon Copy Cloner](http://homepage.mac.com/tnakamula/appccc.html)
 
 &aname(MacPorts);
-**MacPorts - FreeBSDライクなパッケージ管理ツール [#f5d9be85]
-***インストール [#r12fe970]
+##MacPorts - FreeBSDライクなパッケージ管理ツール 
+###インストール 
 -要Xcode。Install DVD から標準インストールで可。
--[[MacPortsのサイト:http://www.macports.org/]]から[[Leopard(Universal):http://svn.macports.org/repository/macports/downloads/MacPorts-1.6.0/MacPorts-1.6.0-10.5-Leopard.dmg]]をダウンロード。
+-[MacPortsのサイト](http://www.macports.org/)から[Leopard(Universal)](http://svn.macports.org/repository/macports/downloads/MacPorts-1.6.0/MacPorts-1.6.0-10.5-Leopard.dmg)をダウンロード。
 -dmgファイルをマウントし、MacPorts-1.6.0.pkgをインストール。
 -環境変数にPATHを追加。
  export PATH=/opt/local/bin:/opt/local/sbin/:$PATH
  export MANPATH=/opt/local/man:$MANPATH
-***使い方 [#n629392c]
-|コマンド|機能|h
+###使い方 
+|コマンド|機能|
 |MacPorts自身を最新の状態にアップデート|$ sudo port -d selfupdate ; sudo port -d sync|
 |ソフトウェア一覧の更新|$ sudo port sync|
 |ソフトウェアの検索|$ port search zsh|
@@ -95,24 +95,24 @@ MacBook、MacBook Pro
 |インストール済みソフトウェアの表示|$ port installed|
 |インストール済みソフトウェアを全てアップグレード|$ sudo port upgrade installed|
 |アップグレード可能なソフトウェアの表示|$ port outdated|
-***参考サイト [#y30423a9]
--[[Macの手書き説明書 - MacPorts:http://veadardiary.blog29.fc2.com/blog-entry-1151.html]]
--[[Beginning OS X 10.5:http://osx.miko.org/index.php/Beginning_OS_X_10.5]]
--[[Mac OS X (Leopard)にMacPortsをインストール:http://osx.miko.org/index.php/Beginning_OS_X_10.5]]
--[[MacPortsでステキなUNIXツールをインストール:http://d.hatena.ne.jp/hakobe932/20061208/1165646618]]
+###参考サイト 
+-[Macの手書き説明書 - MacPorts](http://veadardiary.blog29.fc2.com/blog-entry-1151.html)
+-[Beginning OS X 10.5](http://osx.miko.org/index.php/Beginning_OS_X_10.5)
+-[Mac OS X (Leopard)にMacPortsをインストール](http://osx.miko.org/index.php/Beginning_OS_X_10.5)
+-[MacPortsでステキなUNIXツールをインストール](http://d.hatena.ne.jp/hakobe932/20061208/1165646618)
 
 &aname(Fink);
-**Fink - deb形式のパッケージ管理 [#bf883fd0]
+##Fink - deb形式のパッケージ管理 
 -Finkのインストール。
 --XcodeとX11 for Mac OX Xを事前にインストールしておく。
---Finkのバイナリインストーラを[[ダウンロード:http://fink.sourceforge.net/download/index.php]]し、インストールする。
---[[Finkで利用可能なパッケージ集:http://fink.sorceforge.net/pdb/index.php]]。デフォルトではStableパッケージのみインストール可能。
+--Finkのバイナリインストーラを[ダウンロード](http://fink.sourceforge.net/download/index.php)し、インストールする。
+--[Finkで利用可能なパッケージ集](http://fink.sorceforge.net/pdb/index.php)。デフォルトではStableパッケージのみインストール可能。
 --ディスクイメージからFinkCommanderを「アプリケーション」→「ユーティリティ」フォルダに移しておく。
 -Finkの使用方法。
 --文字化けを防ぐため、環境変数LANGを設定。
  $ export LANG=C
 --Fink関連コマンド。
-|コマンド|機能|備考|h
+|コマンド|機能|備考|
 |$ sudo apt-get update|パッケージリストの更新||
 |$ fink list|パッケージ一覧の表示|iはインストール済み、(i)は更新可能。|
 |$ sudo apt-get install <パッケージ名>|パッケージのインストール|一般コマンドは/sw/bin、管理コマンドは/sw/sbin。|
@@ -126,12 +126,12 @@ MacBook、MacBook Pro
  $ sudo fink selfupdate
 
 &aname(WindowsShare);
-**Windowsファイル共有 [#v09b7b1e]
+##Windowsファイル共有 
 -MacのファイルをWindowsで共有するための設定。
 ++「システム環境設定」→「共有」→「サービス」。
 ++「Windows 共有」を選択し、「開始」。
 ++??ホスト名?アカウント名 等でアクセス。
--[[Windowsの共有フォルダにMacからアクセス:http://www12.ocn.ne.jp/~k-page/lan5.html]]。
+-[Windowsの共有フォルダにMacからアクセス](http://www12.ocn.ne.jp/~k-page/lan5.html)。
 ++「アプリケーション」→「ユーティリティ」→「ディレクトリアクセス」。
 ++「サービス」から''SMB''を選択し、「設定」。
 ++「ワークグループ」にWindowsと同じものを指定する。
@@ -146,14 +146,14 @@ MacBook、MacBook Pro
 --[homes]と[share]へのアクセスを制御。
    hosts allow = 192.168.1.0/255.255.255.0
 
-*アプリケーション覚え書き [#v31e5e23]
+#アプリケーション覚え書き 
 
 &aname(iTunes);
-**iTunes [#s771d026]
--日本語曲名など、[[ID3タグが文字化けする:http://desireforwealth.com/id3tag.html]]。
+##iTunes 
+-日本語曲名など、[ID3タグが文字化けする](http://desireforwealth.com/id3tag.html)。
 ++メニューから「ID3タグを変換...」を実行。
 ++「ASCIIからISO Latin-1」を選択。
--[[ファイアウォールを使用していると音楽の共有ができない:http://til.info.apple.co.jp/cgi-bin/WebObjects/TechInfo.woa/wa/showTIL?id=107547]]。
+-[ファイアウォールを使用していると音楽の共有ができない](http://til.info.apple.co.jp/cgi-bin/WebObjects/TechInfo.woa/wa/showTIL?id=107547)。
 ++「アップルメニュー」→「システム環境設定」を選択。
 ++「共有」パネルをクリック。
 ++「ファイアウォール」タブ→「新規」ボタンをクリック。
@@ -161,24 +161,24 @@ MacBook、MacBook Pro
 ++ Tab キーを押し、次のように入力：iTunes Sharing
 ++「OK」をクリック。
 
-**iPod [#g5d9892b]
--[[Windows用iPodをMacで使用する:http://docs.info.apple.com/jarticle.html?artnum=60920#faq8]]（サポート対象外）。
---[[アップルのWebサイト:http://www.apple.com/jp/ftp-info/index.html]]にあるMac用の''iPod for Mac Software Updater''を使用し、Windows用にフォーマットされたiPodをMac用に変換する。
+##iPod 
+-[Windows用iPodをMacで使用する](http://docs.info.apple.com/jarticle.html?artnum=60920#faq8)（サポート対象外）。
+--[アップルのWebサイト](http://www.apple.com/jp/ftp-info/index.html)にあるMac用の''iPod for Mac Software Updater''を使用し、Windows用にフォーマットされたiPodをMac用に変換する。
 
 &aname(X11);
-**X11 [#gbf82e5c]
+##X11 
 -X11をDVDメディアからインストール。
 --Macmini
  $ open '/Volumes/Mac OS X Install Disc 1/System/Installation/Packages/X11User.pkg'
 --MacBookはMac OSX Install Disk 1 の System/Installation/Packages/X11User.pkg
 
 &aname(Virtualbox);
-**VirtualBox [#pf9f3da5]
--[[Virtualbox:http://www.virtualbox.org/]]、[[ダウンロード:http://www.virtualbox.org/wiki/Downloads]]
--[[2,000カ所以上改良された仮想化ソフト「Sun xVM VirtualBox 1.6」:http://journal.mycom.co.jp/news/2008/05/07/038/index.html]]
+##VirtualBox 
+-[Virtualbox](http://www.virtualbox.org/)、[ダウンロード](http://www.virtualbox.org/wiki/Downloads)
+-[2,000カ所以上改良された仮想化ソフト「Sun xVM VirtualBox 1.6」](http://journal.mycom.co.jp/news/2008/05/07/038/index.html)
 
 &aname(MySQL);
-**MySQL [#b2be900d]
+##MySQL 
 -http://dev.mysql.com/ からMac OS X 10.3 用バイナリをダウンロード。
 --mysql-standard-5.0.17-osx10.3-powerpc.dmg
 --mysql-administrator-1.1.2-macosx10.3-powerpc.dmg
@@ -198,12 +198,12 @@ MacBook、MacBook Pro
  You should be able to connect to the MySQL server, for example, by
  running `/usr/local/mysql/bin/mysql'.
 -参考リンク
---[[MySQL 5.0 Reference Manual (2.5. Installing MySQL on Mac OS X):http://dev.mysql.com/doc/refman/5.0/en/mac-os-x-installation.html]]
+--[MySQL 5.0 Reference Manual (2.5. Installing MySQL on Mac OS X)](http://dev.mysql.com/doc/refman/5.0/en/mac-os-x-installation.html)
 
 &aname(QEMU);
-**QEMU [#p188a69a]
--Mac OS X 向けQEMU、[[Q:http://www.kberg.ch/q/]]をインストール。
--ディスクイメージは[[FreeOSZoo:http://free.oszoo.org/download.html]]からダウンロードできる。
+##QEMU 
+-Mac OS X 向けQEMU、[Q](http://www.kberg.ch/q/)をインストール。
+-ディスクイメージは[FreeOSZoo](http://free.oszoo.org/download.html)からダウンロードできる。
 -QEMUモニターを表示するには、Ctrl-Alt-2を同時に押す。Ctrl-Alt-1で元に戻る。
  QEMU 0.7.1 monitor - type 'help' for more information
  (qemu) info kqemu
@@ -212,26 +212,26 @@ MacBook、MacBook Pro
 -Ctrl-AltをゲストOSに送る場合は、QEMUモニターを使う。
  (qemu) sendkey ctrl-alt-delete
 -参考リンク。
---[[QEMU on Windows:http://www.h7.dion.ne.jp/~qemu-win/index-ja.html]]
+--[QEMU on Windows](http://www.h7.dion.ne.jp/~qemu-win/index-ja.html)
 
 &aname(Rails);
-**Ruby on Rails [#d93ce2d2]
--Ruby on Rails のオールインワンパッケージ、[[Locomovite:http://locomotive.sourceforge.net/]]をインストール。
--RoR用IDE、[[RadRails:http://www.radrails.org/]]をインストール。
+##Ruby on Rails 
+-Ruby on Rails のオールインワンパッケージ、[Locomovite](http://locomotive.sourceforge.net/)をインストール。
+-RoR用IDE、[RadRails](http://www.radrails.org/)をインストール。
 -参考リンク
---[[もしかしたら連載: Ruby on Rails on MacOSXでWebアプリ開発〜第一回 環境構築〜:http://blog.matake.jp/archives/_ruby_on_rails.html]]
+--[もしかしたら連載]( Ruby on Rails on MacOSXでWebアプリ開発〜第一回 環境構築〜:http://blog.matake.jp/archives/_ruby_on_rails.html)
 
 &aname(hyperestraier);
-**Hyper Estraier [#z76f2ea2]
--全文検索システム[[Hyper Estraier:http://hyperestraier.sourceforge.net/index.ja.html]]をインストール。
---まずは、[[QDBM:http://qdbm.sourceforge.net/index.ja.html]]をインストール。
+##Hyper Estraier 
+-全文検索システム[Hyper Estraier](http://hyperestraier.sourceforge.net/index.ja.html)をインストール。
+--まずは、[QDBM](http://qdbm.sourceforge.net/index.ja.html)をインストール。
  $ ./configure --enable-zlib
  $ make mac
  $ make check-mac
  $ sudo make install-mac
 なお、アンインストールする場合は以下の通り。
  $ sudo make uninstall-mac
---続いて、[[Hyper Estraier:http://hyperestraier.sourceforge.net/index.ja.html]]をインストール。
+--続いて、[Hyper Estraier](http://hyperestraier.sourceforge.net/index.ja.html)をインストール。
  $ ./configure
  $ make mac
  $ make check-mac
@@ -239,7 +239,7 @@ MacBook、MacBook Pro
 なお、アンインストールする場合は以下の通り。
  $ sudo make uninstall-mac
 -設定。
---ホームディレクトリのパーソナル Web 共有用のディレクトリにHyper Estraier用のディレクトリを作る。（参考リンク[[jm@foo 2005年09月17日 Hyper Estraierでメール検索:http://minken.net/mt/archives/cat_os_x.html]]）
+--ホームディレクトリのパーソナル Web 共有用のディレクトリにHyper Estraier用のディレクトリを作る。（参考リンク[jm@foo 2005年09月17日 Hyper Estraierでメール検索](http://minken.net/mt/archives/cat_os_x.html)）
  $ mkdir ~/Sites/Estraier
 その中にGyazMail用のディレクトリを作る。
  $ mkdir ~/Sites/Estraier/GyazMail
@@ -284,17 +284,17 @@ apacheを再起動。システム環境設定→共有→パーソナル Web 共
 /etc/crontab に以下の行を追加。
  5 0 * * * /Users/jiro/Sites/Estraier/cron
 以上。
-**ゲーム [#o1d8ffec]
--[[Tux Racer:http://tuxracer.sourceforge.net/index.html]]
+##ゲーム 
+-[Tux Racer](http://tuxracer.sourceforge.net/index.html)
 
 &aname(macmini);
-*Mac mini覚え書き [#f4da35a4]
-**周辺機器 [#n0b87caa]
-- [[GH-MM-HD:http://www.green-house.co.jp/products/mac/index.html]] - Mac mini本体と同一形状のハードディスク（ケース）。
+#Mac mini覚え書き 
+##周辺機器 
+- [GH-MM-HD](http://www.green-house.co.jp/products/mac/index.html) - Mac mini本体と同一形状のハードディスク（ケース）。
 
 &aname(macbook);
-*MacBook覚え書き [#pc81323d]
-**起動しなくなった [#p8f97c2b]
+#MacBook覚え書き 
+##起動しなくなった 
 - 電源投入時に警告メッセージ（電源断orリセットする旨）で止まる。
 - Boot Camp に Windows XP をインストール。Parallels Desktop for Mac Build 3036 Beta でBoot Camp パーティションからWindows XPを起動中、無反応になった。直前の作業は、共有フォルダ設定、自動更新のインストール、全画面からの戻し。
 - バッテリ外して電源５秒押し、PRAMクリア数回実施するも、起動しない。 
@@ -303,28 +303,27 @@ apacheを再起動。システム環境設定→共有→パーソナル Web 共
 - Sofmap PCクリニック（新宿）に持ち込み。初期不良なので即日交換してくれた。Good。
 
 &aname(parallels);
-*[[Parallels Desktop:http://www.parallels.com/]] [#ff1e0137]
-**ダウンロード [#nce16c8c]
--15日間の試用版[[ダウンロード:http://www.parallels.com/en/download/desktop/]]が可能。
--[[Parallels Desktop for Mac日本語版:http://www.proton.co.jp/products/parallels-mac/index.html]]
--[[Parallels desktop β版:http://pc.watch.impress.co.jp/docs/2006/1206/parallels.htm]]
---[[ダウンロード:http://forums.parallels.com/thread5997.html]]。
---Parallels desktop を[[Boot Camp パーティションから起動する:http://dotmb.netwalk.in/?eid=302753]]。 
--[[VMware for Mac Beta:http://www.vmware.com/products/beta/fusion/]]もダウンロード可能になった。試用には登録が必要。
+#[Parallels Desktop](http://www.parallels.com/) 
+##ダウンロード 
+-15日間の試用版[ダウンロード](http://www.parallels.com/en/download/desktop/)が可能。
+-[Parallels Desktop for Mac日本語版](http://www.proton.co.jp/products/parallels-mac/index.html)
+-[Parallels desktop β版](http://pc.watch.impress.co.jp/docs/2006/1206/parallels.htm)
+--[ダウンロード](http://forums.parallels.com/thread5997.html)。
+--Parallels desktop を[Boot Camp パーティションから起動する](http://dotmb.netwalk.in/?eid=302753)。 
+-[VMware for Mac Beta](http://www.vmware.com/products/beta/fusion/)もダウンロード可能になった。試用には登録が必要。
 
-**キーボード環境の改善 [#q59389e4]
+##キーボード環境の改善 
 -トラックパッドでの右クリック設定
 --[システム環境設定] - [キーボードとマウス] -「副ボタンのクリックの代わりにトラックパッドに 2 本指を触れてボタンをクリック」をオン。
--[[CmdSpace:http://www.h5.dion.ne.jp/~pollux/]] - [command] + [space]で日本語入力を切り替える
--[[OS X ハッキング! 第186回 Parallels Desktop for Macのキーボードを考える:http://journal.mycom.co.jp/column/osx/186/]] - 手軽さを優先するなら「[[AppleKbWin:http://www.geocities.jp/funchi_soft/]]」
+-[CmdSpace](http://www.h5.dion.ne.jp/~pollux/) - [command] + [space]で日本語入力を切り替える
+-[OS X ハッキング! 第186回 Parallels Desktop for Macのキーボードを考える](http://journal.mycom.co.jp/column/osx/186/) - 手軽さを優先するなら「[AppleKbWin](http://www.geocities.jp/funchi_soft/)」
 
-**関連ソフトウェア [#g3667f7a]
--[[VirtueDesktops:http://www.virtuedesktops.info/]] - 複数デスクトップを切り替えて使うソフトウェア。VMの切り替えに使うと便利。
-
+##関連ソフトウェア 
+-[VirtueDesktops](http://www.virtuedesktops.info/) - 複数デスクトップを切り替えて使うソフトウェア。VMの切り替えに使うと便利。
 
 &aname(BootCamp);
-*BootCamp [#b0d7e463]
-**[[Macの外付けHDDにWindows10をインストール:http://niwkr.blog.jp/archives/50481040.html]] [#x4ff492c]
+#BootCamp 
+##[Macの外付けHDDにWindows10をインストール](http://niwkr.blog.jp/archives/50481040.html) 
 -Windows10用の外付けHDDと上記のUSBインストールディスクを挿して再起動。
 -Optionを押してWindowsを選択しUSBインストールディスクを起動する。
 -インストール画面が出るがShift＋F10でコマンドウィンドウを開く。
@@ -359,10 +358,10 @@ apacheを再起動。システム環境設定→共有→パーソナル Web 共
 -MacHDはMacのディスクユーティリティよりMacHDを選んで消去。その時にフォーマット形式をMac OS拡張（ジャーナリング）にする。
 -Install.wimはInstall.esdでも可。
 
-**[[新しいパーティションを作成できなかったか、既にあるパーティションが見つかりませんでした:https://qiita.com/tarosuke@github/items/a593fd091cbbc3f2ba8b]] [#e6af343b]
-***原因 [#e88311e9]
+##[新しいパーティションを作成できなかったか、既にあるパーティションが見つかりませんでした](https://qiita.com/tarosuke@github/items/a593fd091cbbc3f2ba8b) 
+###原因 
 リムーバブルでないストレージとして認識されるリムーバブルドライブがあること。パーティショナーはドライブレターで認識しているのでそういうストレージが認識されてるとドライブレターがずれて認識できなくなる。
-***対策 [#b6992f6c]
+###対策 
 USBメモリでインストールしている場合の対策。
  パーティションを切る(ここまでは普通に)
  Shift-F10を押してコマンドプロンプトを出す
@@ -381,99 +380,98 @@ USBメモリでインストールしている場合の対策。
  インストーラが起動するのでそのままインストール
 インストール先パーティションにインストーラをコピーするのがキモ。
 
-**Windows10ドライバのインストール [#s62cd2ec]
--[[Boot CampのWindowsサポートソフトウェアを再インストール:https://renderseed.link/inome/2018/ht204923/]]
+##Windows10ドライバのインストール 
+-[Boot CampのWindowsサポートソフトウェアを再インストール](https://renderseed.link/inome/2018/ht204923/)
  「アクション」＞「Windowsサポートソフトウェアをダウンロード」をクリックし、保存先のパスを指定すると「WindowsSupport」フォルダが作られます。
 
-**関連サイト [#x8f9b4b1]
--[[Boot Camp サポート:https://support.apple.com/ja-jp/boot-camp]]
---[[Boot Camp を使って Mac で Windows 10 を使う:https://support.apple.com/ja-jp/HT204990]]
---[[Boot Camp で Windows を実行しているときに Mac の一部の機能が働かない場合:https://support.apple.com/ja-jp/HT204923]]
--[[容量節約！iMacやMacBookのBootcampで外付けHDDへWindowsをインストールする方法:http://blog.mokosoft.com/entry/2015/12/22/141933]]
--[[Macの外付けHDDにWindows10をインストール:http://niwkr.blog.jp/archives/50481040.html]]
+##関連サイト 
+-[Boot Camp サポート](https://support.apple.com/ja-jp/boot-camp)
+--[Boot Camp を使って Mac で Windows 10 を使う](https://support.apple.com/ja-jp/HT204990)
+--[Boot Camp で Windows を実行しているときに Mac の一部の機能が働かない場合](https://support.apple.com/ja-jp/HT204923)
+-[容量節約！iMacやMacBookのBootcampで外付けHDDへWindowsをインストールする方法](http://blog.mokosoft.com/entry/2015/12/22/141933)
+-[Macの外付けHDDにWindows10をインストール](http://niwkr.blog.jp/archives/50481040.html)
 
 &aname(dashboad);
-*Dashboad Widgets [#fc93015d]
--[[Wikipedia Widget:http://www.whatsinthehouse.com/widgets/]] - オンライン百科事典Wikipedaを参照するウィジット。
--[[Capture:http://www.vanillasoap.com/widgets/all.html]] - スクリーンキャプチャ
--[[空模様:http://www.cyanworks.net/dboardSoraMoyo.html]] - 天気予報。気象庁のデータを取得出来る。
--[[Sidekick Dictionary:http://veadardiary.blog29.fc2.com/blog-entry-999.html]] - 英和、和英、国語辞典。
--[[rsyncw:http://miwa.offside.ne.jp/downloads/rsyncw.html]] - rsync, ファイルを効率よく同期できる。
-
+#Dashboad Widgets 
+-[Wikipedia Widget](http://www.whatsinthehouse.com/widgets/) - オンライン百科事典Wikipedaを参照するウィジット。
+-[Capture](http://www.vanillasoap.com/widgets/all.html) - スクリーンキャプチャ
+-[空模様](http://www.cyanworks.net/dboardSoraMoyo.html) - 天気予報。気象庁のデータを取得出来る。
+-[Sidekick Dictionary](http://veadardiary.blog29.fc2.com/blog-entry-999.html) - 英和、和英、国語辞典。
+-[rsyncw](http://miwa.offside.ne.jp/downloads/rsyncw.html) - rsync, ファイルを効率よく同期できる。
 
 &aname(safari);
-*Safari拡張 [#zf2377bf]
--[[SafariStand:http://hetima.com/]] - Safariに機能追加
+#Safari拡張 
+-[SafariStand](http://hetima.com/) - Safariに機能追加
 --インストール
----SIMBLプラグインとしてインストールするため、まず[[SIMBL:http://culater.net/software/SIMBL/SIMBL.php]]をインストール。
+---SIMBLプラグインとしてインストールするため、まず[SIMBL](http://culater.net/software/SIMBL/SIMBL.php)をインストール。
 ---SafariStand フォルダのSafariStand.bundleを SIMBL のプラグインフォルダ/Library/Application Support/SIMBL/Plugins/SafariStand.bundle に入れる。
 --推奨設定
 ---General→[gifアニメーションを無効にする]、[ターゲットリンクをタブで開く]
--[[PicLens:http://www.piclens.com/mac/en/]] - 全画面でイメージ検索（safari専用）
+-[PicLens](http://www.piclens.com/mac/en/) - 全画面でイメージ検索（safari専用）
 
 &aname(application);
-*その他メモ [#a5af610e]
--[[MplayerOSX:http://mplayerosx.sourceforge.net/]]
---[[【コラム】OS X ハッキング! 第74回 OS Xの動画環境を整理する(1):http://pcweb.mycom.co.jp/column/osx/074/]]
--[[NeoOffice/J:http://www.planamesa.com/neojava/ja/]]
--[[Windows Media Player 9 for Mac OS X:http://www.microsoft.com/japan/windows/windowsmedia/software/macintosh/osx/default.aspx]]
+#その他メモ 
+-[MplayerOSX](http://mplayerosx.sourceforge.net/)
+--[【コラム】OS X ハッキング! 第74回 OS Xの動画環境を整理する(1)](http://pcweb.mycom.co.jp/column/osx/074/)
+-[NeoOffice/J](http://www.planamesa.com/neojava/ja/)
+-[Windows Media Player 9 for Mac OS X](http://www.microsoft.com/japan/windows/windowsmedia/software/macintosh/osx/default.aspx)
 -VNC
---[[VNCサーバ OSXvnc:http://www.redstonesoftware.com/vnc.html]] (vine server)
---[[VNCビューア VNCdimension:http://www.mdimension.com/cgi-bin/WebObjects/mDimension.woa/wa/software]]
---[[Chicken of the VNC:http://www.macupdate.com/info.php/id/9517]]
--[[OS X Package Manager:http://www.osxgnu.org]]
--Emacs - [[Carbon Emacsパッケージ:http://homepage.mac.com/zenitani/emacs-j.html]]
---[[Emacs21 on Mac入門から中毒まで:http://sakito.s2.xrea.com/detail/emacs/emacs21.html]]
---[[MacWiki - Carbon Emacs:http://macwiki.sourceforge.jp/cgi-bin/wiki.cgi?CarbonEmacs]]
---[[【コラム】OS X ハッキング! 第83回 Carbon Emacsの設定(4) :http://pcweb.mycom.co.jp/column/osx/083/]]
--[[Azureus:http://azureus.sourceforge.net/]] - Java BitTorrent Client
--[[ClamXav:http://www.clamxav.com/]]
--[[KeePass:http://keepass.sourceforge.net/download.php]] - パスワード管理ソフト
--[[UnRarX:http://www.unrarx.com/]]
--[[iTerm:http://iterm.sourceforge.net/]] - タブ式ターミナル
+--[VNCサーバ OSXvnc](http://www.redstonesoftware.com/vnc.html) (vine server)
+--[VNCビューア VNCdimension](http://www.mdimension.com/cgi-bin/WebObjects/mDimension.woa/wa/software)
+--[Chicken of the VNC](http://www.macupdate.com/info.php/id/9517)
+-[OS X Package Manager](http://www.osxgnu.org)
+-Emacs - [Carbon Emacsパッケージ](http://homepage.mac.com/zenitani/emacs-j.html)
+--[Emacs21 on Mac入門から中毒まで](http://sakito.s2.xrea.com/detail/emacs/emacs21.html)
+--[MacWiki - Carbon Emacs](http://macwiki.sourceforge.jp/cgi-bin/wiki.cgi?CarbonEmacs)
+--[【コラム】OS X ハッキング! 第83回 Carbon Emacsの設定(4) ](http://pcweb.mycom.co.jp/column/osx/083/)
+-[Azureus](http://azureus.sourceforge.net/) - Java BitTorrent Client
+-[ClamXav](http://www.clamxav.com/)
+-[KeePass](http://keepass.sourceforge.net/download.php) - パスワード管理ソフト
+-[UnRarX](http://www.unrarx.com/)
+-[iTerm](http://iterm.sourceforge.net/) - タブ式ターミナル
 
-//-[[OSX-NAVI:http://osx-navi.main.jp/]] - Mac OS X 専門のソフトウェア検索サイト
--[[お気に入りのアプリケーション:http://favorite-app.net/]]
---[[MPlayer:http://www.mplayerhq.hu/design7/news.html]] - aviの再生が可能なムービープレイヤー
---[[Movie Time:http://www.sansworks.com/]] - フルスクリーンで再生できるQuickTimeプレイヤー
---[[CocoaMovieBrowser:http://homepage.mac.com/kitanin/cmb.html]] - プレイリスト機能付きムービープレイヤー
---[[Perian:http://perian.org/]] - QuickTimeでDivx、FLVを再生するプラグイン
---[[FFusion:http://aldorandenet.free.fr/codecs/]] - QuickTimeで主要なaviの再生が可能になる
---[[PictPicker:http://www.geocities.jp/kwhr0/]] - ZIPファイルにも対応した高速画像ビューア
---[[SwiftSlideShow:http://homepage.mac.com/yhanda/soft.html]] - メモリを大量に使用するかわりに高速に画像を切り替える画像ビューア。
---[[BlueSkyReader:http://hp.vector.co.jp/authors/VA019952/]] - 縦書きに対応した電子書籍用の簡易ブラウザ。青空文庫に対応。
+//-[OSX-NAVI](http://osx-navi.main.jp/) - Mac OS X 専門のソフトウェア検索サイト
+-[お気に入りのアプリケーション](http://favorite-app.net/)
+--[MPlayer](http://www.mplayerhq.hu/design7/news.html) - aviの再生が可能なムービープレイヤー
+--[Movie Time](http://www.sansworks.com/) - フルスクリーンで再生できるQuickTimeプレイヤー
+--[CocoaMovieBrowser](http://homepage.mac.com/kitanin/cmb.html) - プレイリスト機能付きムービープレイヤー
+--[Perian](http://perian.org/) - QuickTimeでDivx、FLVを再生するプラグイン
+--[FFusion](http://aldorandenet.free.fr/codecs/) - QuickTimeで主要なaviの再生が可能になる
+--[PictPicker](http://www.geocities.jp/kwhr0/) - ZIPファイルにも対応した高速画像ビューア
+--[SwiftSlideShow](http://homepage.mac.com/yhanda/soft.html) - メモリを大量に使用するかわりに高速に画像を切り替える画像ビューア。
+--[BlueSkyReader](http://hp.vector.co.jp/authors/VA019952/) - 縦書きに対応した電子書籍用の簡易ブラウザ。青空文庫に対応。
 
--[[Mac買ったらすぐにいれるフリーソフトウェア まとめ Wiki:http://wiki.fdiary.net/mac2ch/]]
---[[Magic Lantern:http://soulcrushingjob.com/archives/cat_magic_lantern.php]] - 画像ビューア
---[[VitaminSEE:http://www.elliotglaysher.org/vitaminsee]] - 高速画像ビューア
---[[Lupin:http://lupin.sourceforge.jp/index.php?FrontPage]] - アーカイバ
---[[Flip4Mac WMV:http://www.flip4mac.com/]] - WMVファイルをQuickTimeで再生するプラグイン
---[[Google Notifier for Mac:http://mail.google.com/mail/help/notifier/notifier_mac.html]] - Gmailの着信を知らせる
+-[Mac買ったらすぐにいれるフリーソフトウェア まとめ Wiki](http://wiki.fdiary.net/mac2ch/)
+--[Magic Lantern](http://soulcrushingjob.com/archives/cat_magic_lantern.php) - 画像ビューア
+--[VitaminSEE](http://www.elliotglaysher.org/vitaminsee) - 高速画像ビューア
+--[Lupin](http://lupin.sourceforge.jp/index.php?FrontPage) - アーカイバ
+--[Flip4Mac WMV](http://www.flip4mac.com/) - WMVファイルをQuickTimeで再生するプラグイン
+--[Google Notifier for Mac](http://mail.google.com/mail/help/notifier/notifier_mac.html) - Gmailの着信を知らせる
 
--[[Macの手書き説明書:http://veadardiary.blog29.fc2.com/blog-entry-905.html]]
---[[uApp:http://www.eagle-of-liberty.com/uapp/index_en.php]] - アプリケーションのアンインストール
---[[xPad:http://getxpad.com/]] - シンプルなメモ帳
---[[Punakea:http://www.nudgenudge.eu/punakea]] - ありとあらゆるファイルをタグ付け
---[[URLcollector:http://veadardiary.blog29.fc2.com/blog-entry-140.html]] - 万能ダウンローダ
---[[The Unarchiver:http://veadardiary.blog29.fc2.com/blog-entry-661.html]] - ほとんどの圧縮形式を解凍可能なソフト
---[[Phoenix Slides:http://veadardiary.blog29.fc2.com/blog-entry-405.html]] - ファイルブラウザ付き画像ビューア
---[[LiquidCD:http://veadardiary.blog29.fc2.com/blog-entry-203.html]] - CD/DVDライティングアプリ
---[[FolderGlance:http://veadardiary.blog29.fc2.com/blog-entry-923.html]] - コンテクストメニューから目的の階層のファイル、フォルダにアクセス
+-[Macの手書き説明書](http://veadardiary.blog29.fc2.com/blog-entry-905.html)
+--[uApp](http://www.eagle-of-liberty.com/uapp/index_en.php) - アプリケーションのアンインストール
+--[xPad](http://getxpad.com/) - シンプルなメモ帳
+--[Punakea](http://www.nudgenudge.eu/punakea) - ありとあらゆるファイルをタグ付け
+--[URLcollector](http://veadardiary.blog29.fc2.com/blog-entry-140.html) - 万能ダウンローダ
+--[The Unarchiver](http://veadardiary.blog29.fc2.com/blog-entry-661.html) - ほとんどの圧縮形式を解凍可能なソフト
+--[Phoenix Slides](http://veadardiary.blog29.fc2.com/blog-entry-405.html) - ファイルブラウザ付き画像ビューア
+--[LiquidCD](http://veadardiary.blog29.fc2.com/blog-entry-203.html) - CD/DVDライティングアプリ
+--[FolderGlance](http://veadardiary.blog29.fc2.com/blog-entry-923.html) - コンテクストメニューから目的の階層のファイル、フォルダにアクセス
 
--[[OSX Freeware:http://www16.plala.or.jp/x-tomo/]]
---[[FFView:http://www.feedface.com/software/ffview.html]] - OpenGLベースの画像ビューア
---[[Galerie:http://www.myriad-online.com/en/products/galerie.htm]] - iPhoto選択画像でギャラリーHTML作成
+-[OSX Freeware](http://www16.plala.or.jp/x-tomo/)
+--[FFView](http://www.feedface.com/software/ffview.html) - OpenGLベースの画像ビューア
+--[Galerie](http://www.myriad-online.com/en/products/galerie.htm) - iPhoto選択画像でギャラリーHTML作成
 
--[[MacFan net:http://macfannet.mycom.co.jp/mf/index.html]]
---[[Zipeg:http://www.zipeg.com/]] - zip,7z,rar,bz2,gz,tgz,tar,arj,lzh,z,cab,chmに対応するファイルユーティリティ。アーカイブファイルの閲覧、ドラッグ＆ドロップによる展開ができる
+-[MacFan net](http://macfannet.mycom.co.jp/mf/index.html)
+--[Zipeg](http://www.zipeg.com/) - zip,7z,rar,bz2,gz,tgz,tar,arj,lzh,z,cab,chmに対応するファイルユーティリティ。アーカイブファイルの閲覧、ドラッグ＆ドロップによる展開ができる
 
--[[新しもの好きのダウンロード:http://mac.page.ne.jp/]]
+-[新しもの好きのダウンロード](http://mac.page.ne.jp/)
 
--[[Mac.EGOism.jp:http://mac.egoism.jp/]]
+-[Mac.EGOism.jp](http://mac.egoism.jp/)
 
--[[Quicksilver:http://quicksilver.blacktree.com/]] - キー操作でアプリケーションを起動。
---[[QuicksilverでSpotlightコメントを:http://www.sumainobaiten.com/blog/zakki/archives/2006/12/quicksilverspot.html]] - File Tagging Module
---[[Quicksilverでいろいろやってみた:http://un-q.net/2007/02/quicksilver_1.html]]
+-[Quicksilver](http://quicksilver.blacktree.com/) - キー操作でアプリケーションを起動。
+--[QuicksilverでSpotlightコメントを](http://www.sumainobaiten.com/blog/zakki/archives/2006/12/quicksilverspot.html) - File Tagging Module
+--[Quicksilverでいろいろやってみた](http://un-q.net/2007/02/quicksilver_1.html)
  プラグインから「File Tagging Module(+)」追加
  1, タグ付けしたいファイルを選択
  2, Quicksilver起動
@@ -481,24 +479,24 @@ USBメモリでインストールしている場合の対策。
  4, tabでアクションへ
  5, Add Tags...
  6, ファイルの「Spotlightコメント」に「@タグ名」が追加される
--[[iXiu:http://www.insist.nl/]] - menu barに収納できるランチャー
--[[buler:http://www.manytricks.com/butler/]] - カスタマイズ性の高い多機能ランチャー
--[[iStumbler:http://www.istumbler.net/]] - 無線アクセスポイントを管理
--[[stellarium:http://www.stellarium.org/]] - [[デスクトップでプラネタリウム:http://gigazine.net/index.php?/news/comments/20060513_stellarium/]]
--[[FinderPop:http://sukechan.blog1.fc2.com/blog-entry-377.html]] - コンテクストメニュー機能を拡張する環境設定パネル
---[[Osamu Sato's Web Page（ローカライズ作者、FinderPop掲示板あり）:http://www.connectworks.jp/localize/]]
---[[FinderPop 2.0.1（FinderPopの紹介）:http://pisces-319.seesaa.net/article/32020312.html]]
+-[iXiu](http://www.insist.nl/) - menu barに収納できるランチャー
+-[buler](http://www.manytricks.com/butler/) - カスタマイズ性の高い多機能ランチャー
+-[iStumbler](http://www.istumbler.net/) - 無線アクセスポイントを管理
+-[stellarium](http://www.stellarium.org/) - [デスクトップでプラネタリウム](http://gigazine.net/index.php?/news/comments/20060513_stellarium/)
+-[FinderPop](http://sukechan.blog1.fc2.com/blog-entry-377.html) - コンテクストメニュー機能を拡張する環境設定パネル
+--[Osamu Sato's Web Page（ローカライズ作者、FinderPop掲示板あり）](http://www.connectworks.jp/localize/)
+--[FinderPop 2.0.1（FinderPopの紹介）](http://pisces-319.seesaa.net/article/32020312.html)
  コンテキストメニュー表示中に
  command または r: オリジナルの表示
  command+option または i: 情報を表示
  command+shift+option または p: プレビューを表示
  control+command+option または delete: ゴミ箱
  TAB: Infoウィンドウ表示
--[[PicNavi:http://hp.vector.co.jp/authors/VA023466/picnavi.html]] - ショートカット、見開きに対応したビューア
--[[ゲッター１:http://hccweb1.bai.ne.jp/ili/getter1.html]] - 分割・D&Dに対応したダウンロード支援ツール
--[[NicePlayer:http://niceplayer.sourceforge.net/]] - シンプルな動画ビューア
--[[ShieldUp!:http://web.mac.com/tomohiko/iWeb/THE%20POOH%20FILES/SheildUp%21.html]] - 半透明のシールドでスクリーンを保護する簡易セリュリティツール
--[[JustLooking:http://d.hatena.ne.jp/harurin/20070531/p4]] - アプリケーションウィンドウにD&Dできる画像ビューア
+-[PicNavi](http://hp.vector.co.jp/authors/VA023466/picnavi.html) - ショートカット、見開きに対応したビューア
+-[ゲッター１](http://hccweb1.bai.ne.jp/ili/getter1.html) - 分割・D&Dに対応したダウンロード支援ツール
+-[NicePlayer](http://niceplayer.sourceforge.net/) - シンプルな動画ビューア
+-[ShieldUp!](http://web.mac.com/tomohiko/iWeb/THE%20POOH%20FILES/SheildUp%21.html) - 半透明のシールドでスクリーンを保護する簡易セリュリティツール
+-[JustLooking](http://d.hatena.ne.jp/harurin/20070531/p4) - アプリケーションウィンドウにD&Dできる画像ビューア
 
-*添付ファイル [#x2c850e8]
+#添付ファイル 
 #attach()

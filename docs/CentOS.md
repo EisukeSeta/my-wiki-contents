@@ -1,9 +1,9 @@
 [[seta.go.dyndns.org]]
-*yumの使い方 [#z66e98c5]
+#yumの使い方 
  $ sudo yum check-update
  $ sudo yum update
 
-*ddclientの設定 [#e43b0cfc]
+#ddclientの設定 
 ddclientのインストール
  $ wget http://cdn.dyndns.com/ddclient.tar.gz
  $ tar zxvf ddclient.tar.gz

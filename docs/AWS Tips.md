@@ -1,17 +1,17 @@
 [[FrontPage]]
 
-*AWS費用 [#u7464e4e]
+#AWS費用 
 -参考リンク
---[[ざっくりAWS (EC2):https://aws-rough.cc/ec2/]]
----[[ざっくりAWS Fargateの料金を日本円で計算:https://aws-rough.cc/fargate/]]
+--[ざっくりAWS (EC2)](https://aws-rough.cc/ec2/)
+---[ざっくりAWS Fargateの料金を日本円で計算](https://aws-rough.cc/fargate/)
 
-*EC2の設定 [#d82e481c]
+#EC2の設定 
 
 -参考リンク
---[[【AWS】VPCを設定して自分だけのネットワーク環境を構築してみよう:https://kacfg.com/vpc/]]
---[[【AWS】EC2でAmazon Linux 2を構築しSSH接続してみよう:https://kacfg.com/ec2-amazon-linux/]]
+--[【AWS】VPCを設定して自分だけのネットワーク環境を構築してみよう](https://kacfg.com/vpc/)
+--[【AWS】EC2でAmazon Linux 2を構築しSSH接続してみよう](https://kacfg.com/ec2-amazon-linux/)
 
-**Node.js のセットアップ [#a540fdf9]
+##Node.js のセットアップ 
 -Linux インスタンスで Node.js を設定するには
 +SSH を使用して、Linux インスタンスに ec2-user として接続します。
 +コマンドラインで次のように入力して、ノードバージョンマネージャー (nvm) をインストールします。
@@ -26,10 +26,10 @@ nvm では Node.js の複数のバージョンをインストールすること�
  Running Node.js VERSION
 
 -参考リンク
---[[Github nvm:https://github.com/nvm-sh/nvm/blob/master/README.md#installing-and-updating]]
---[[チュートリアル: Amazon EC2 インスタンスでの Node.js のセットアップ:https://docs.aws.amazon.com/ja_jp/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html]]
+--[Github nvm](https://github.com/nvm-sh/nvm/blob/master/README.md#installing-and-updating)
+--[チュートリアル]( Amazon EC2 インスタンスでの Node.js のセットアップ:https://docs.aws.amazon.com/ja_jp/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html)
 
-**AWS CDK CLI のインストール [#cc1b8a9a]
+##AWS CDK CLI のインストール 
 -Node Package Managerを使用してCKD CLIをインストール （-g オプションでグローバルにインストール）
  $ npm install -g aws-cdk
 -CDK CLI の正常なインストールの確認
@@ -41,16 +41,16 @@ nvm では Node.js の複数のバージョンをインストールすること�
  aws_secret_access_key = XXXXXXXXXXXX
 
 -参考リンク
---[[AWS CDK の開始方法:https://docs.aws.amazon.com/ja_jp/cdk/v2/guide/getting_started.html]]
---[[ローカル環境でIAMロール権限を取得する:https://qiita.com/harumaki-web/items/f7ec46cb5f6b7b5a9cc3]]
+--[AWS CDK の開始方法](https://docs.aws.amazon.com/ja_jp/cdk/v2/guide/getting_started.html)
+--[ローカル環境でIAMロール権限を取得する](https://qiita.com/harumaki-web/items/f7ec46cb5f6b7b5a9cc3)
 
-* Fargateの設定 [#wd7db513]
+1. Fargateの設定 
 
 -参考リンク
 --[[[初心者向け]言われるままにFargate初めて触ったので、忘れないための記録:https://dev.classmethod.jp/articles/fargate-my-first-step/]]
 
-**AWS Copilot CLI [#zaaf5db4]
--[[Homebrew:https://brew.sh/ja/]]のインストール
+##AWS Copilot CLI 
+-[Homebrew](https://brew.sh/ja/)のインストール
  $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 --/home/linuxbrew/　以下にインストールされる。インストール途中の指示に従う。
  ==> Next steps:
@@ -97,9 +97,9 @@ nvm では Node.js の複数のバージョンをインストールすること�
  $ copilot app delete copilot-pukiwiki
 
 -参考リンク
---[[ECSのオペレーションを劇的に簡略化するAWS Copilotが発表されました！:https://dev.classmethod.jp/articles/aws-copilot/]]
---[[AWS Copilot CLI のインストール:https://docs.aws.amazon.com/AmazonECS/latest/developerguide/copilot-install.html]]
---[[AWS Copilot 入門:https://qiita.com/yoshii0110/items/8a74cc0fc540ae3f2389]]
---[[AWS Copilotで検証環境を構築した話:https://qiita.com/ttanaka-gxp/items/238017f2ea61492ac154]]
---[[AWS Copilot CLIを試してみた:https://qiita.com/zumax/items/bc89fb76db531742499b]]
---[[AWS Copilot CLIのススメ:https://zenn.dev/praha/articles/f42467cd6a9e79]]
+--[ECSのオペレーションを劇的に簡略化するAWS Copilotが発表されました！](https://dev.classmethod.jp/articles/aws-copilot/)
+--[AWS Copilot CLI のインストール](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/copilot-install.html)
+--[AWS Copilot 入門](https://qiita.com/yoshii0110/items/8a74cc0fc540ae3f2389)
+--[AWS Copilotで検証環境を構築した話](https://qiita.com/ttanaka-gxp/items/238017f2ea61492ac154)
+--[AWS Copilot CLIを試してみた](https://qiita.com/zumax/items/bc89fb76db531742499b)
+--[AWS Copilot CLIのススメ](https://zenn.dev/praha/articles/f42467cd6a9e79)

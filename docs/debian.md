@@ -1,10 +1,10 @@
 [[seta.go.dyndns.org]]
 
-*目次 [#e62c9df1]
+#目次 
 #contents
 
-*apt [#e6c9812b]
-**aptの使い方 （aptitudeを推奨）[#f83c48ed]
+#apt 
+##aptの使い方 （aptitudeを推奨）
  aptitude install YYXXXYY
  aptitude search XXX
 
@@ -16,7 +16,7 @@
 インストール済みパッケージ一覧
  dpkg -l
 
-***apt-line [#qbfac96d]
+###apt-line 
  deb http://ftp.debian.org/debian lenny main contrib non-free
  
  deb http://security.debian.org/ lenny/updates main contrib non-free
@@ -24,9 +24,9 @@
  
  deb http://ftp.jp.debian.org/debian-volatile lenny/volatile main contrib non-free
 
-[[lenny/Package:http://debian.fam.cx/index.php?lenny%2FPackage]]
+[lenny/Package](http://debian.fam.cx/index.php?lenny%2FPackage)
 
-***Debian Backports [#r8f9b7f5]
+###Debian Backports 
 testing や unstable から Backport したパッケージを提供している。
 どんなパッケージが提供されているかは、 http://packages.debian.org/lenny-backports/ を参照。
 
@@ -39,7 +39,7 @@ testing や unstable から Backport したパッケージを提供している�
 
 まずは debian-backports-keyring パッケージをインストールし、公開鍵を入手して下さい。
 
-***apt-get [#v73282fe]
+###apt-get 
  apt-get install debian-backports-keyring
  apt-get install aptitude
 
@@ -48,32 +48,32 @@ testing や unstable から Backport したパッケージを提供している�
  aptitude install mysql-server
  aptitude install php5-mysql
 
-**apt以外でインストール [#k6bb39fb]
-***tarball [#if2b4bfb]
+##apt以外でインストール 
+###tarball 
  pukiwiki-1.4.7_notb_utf8.tar.gz
  wordpress-3.0.1-ja.tar.gz
 
-*パッケージのインストールメモ [#j9040d6d]
-//**apache2 [#c5da87e1]
+#パッケージのインストールメモ 
+//**apache2 
 ///etc/apache2/apache2.confのユーザー、グループを変更。
 // User www-data
 // Group www-data
 ///var/www/html以下も適宜変更。
 
-**MySQL [#k3ccdb32]
-***参考URL [#zc132122]
-+[[Debian etch に MySQL 5 と設定ツールを導入する:http://asaasa.tk/wiki/?Debian%2FServer%2FMySQL]]
-+[[debianにMySQLをインストールして設定する - 見果てぬ夢:http://d.hatena.ne.jp/Loups-garous/20080919/1221816870]]
+##MySQL 
+###参考URL 
++[Debian etch に MySQL 5 と設定ツールを導入する](http://asaasa.tk/wiki/?Debian%2FServer%2FMySQL)
++[debianにMySQLをインストールして設定する - 見果てぬ夢](http://d.hatena.ne.jp/Loups-garous/20080919/1221816870)
 
-***インストール [#n34c4951]
+###インストール 
  $ sudo aptitude install mysql-server
  $ sudo aptitude install php5-mysql
 
-***起動確認 [#r64eaebf]
+###起動確認 
  $ mysqladmin ping -u root -p
  mysqld is alive
 
-***uft-8設定 [#vfefe98f]
+###uft-8設定 
 /etc/mysql/my.cnfを編集。
  [client]
  default-character-set=utf8
@@ -90,13 +90,13 @@ testing や unstable から Backport したパッケージを提供している�
  mysql> status
  mysql> SHOW VARIABLES LIKE 'char%'; 
 
-**WordPress日本語版 [#y61b4f27]
-***参考URL [#fc2fd2f8]
-+[[WordPress.日本語:http://wpdocs.sourceforge.jp/]]
-+[[wordpressの設定 -metalglue:http://d.hatena.ne.jp/metalglue/20061204/1165231144]]
+##WordPress日本語版 
+###参考URL 
++[WordPress.日本語](http://wpdocs.sourceforge.jp/)
++[wordpressの設定 -metalglue](http://d.hatena.ne.jp/metalglue/20061204/1165231144)
 
-***インストール [#o106424d]
-[[WordPress.日本語:http://wpdocs.sourceforge.jp/]]の[[WordPressのインストール:http://wpdocs.sourceforge.jp/WordPress_%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB]]に従い、最新版のWordPress日本語版をダウンロード（[[ja.wordpress.org:http://ja.wordpress.org/]]）。
+###インストール 
+[WordPress.日本語](http://wpdocs.sourceforge.jp/)の[WordPressのインストール](http://wpdocs.sourceforge.jp/WordPress_%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)に従い、最新版のWordPress日本語版をダウンロード（[ja.wordpress.org](http://ja.wordpress.org/)）。
 
 MySQLデータベースの準備。
  $ mysql -u root -p
@@ -106,9 +106,9 @@ MySQLデータベースの準備。
  mysql> FLUSH PRIVILEGES;
 
 wordpressのインストール
-+[[http://seta.mydns.jp/html/wordpress/wp-admin/install.php:http://seta.mydns.jp/html/wordpress/wp-admin/install.php]]にアクセス。
++[http](//seta.mydns.jp/html/wordpress/wp-admin/install.php:http://seta.mydns.jp/html/wordpress/wp-admin/install.php)にアクセス。
 +「5分でできるインストールプロセス」を実施。
 +最初の書き込みをチェックして終わり。
 
-***アクセス [#s6e0fe08]
-[[http://seta.mydns.jp/html/wordpress:http://seta.mydns.jp/html/wordpress]]
+###アクセス 
+[http](//seta.mydns.jp/html/wordpress:http://seta.mydns.jp/html/wordpress)

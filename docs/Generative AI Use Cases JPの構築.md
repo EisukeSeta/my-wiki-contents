@@ -1,7 +1,7 @@
 [[FrontPage]]
 
-*Generative AI Use Cases JPの構築 [#qfe7297d]
-**環境準備 [#x0544289]
+#Generative AI Use Cases JPの構築 
+##環境準備 
 -手元の環境で必要なもの（WSL2で準備済み）
  AWSアカウント
  AWS CLI
@@ -24,12 +24,12 @@
 -アカウントを作成し、利用する
 
 -参考リンク
---[[Github generative-ai-use-cases-jp:https://github.com/aws-samples/generative-ai-use-cases-jp]]
----[[ネイティブアプリのように利用する方法:https://github.com/aws-samples/generative-ai-use-cases-jp/blob/main/docs/PWA.md]]
---[[Generative AI Use Cases JP をデプロイしてチャットを触ってみた:https://qiita.com/wasashi/items/76642d6a864ee7dafd29]]
---[[AWSのGenUを試してみました。自社専用の生成AI利用システムが手軽に作れる！:https://biz.addisteria.com/aws_genu/]]
+--[Github generative-ai-use-cases-jp](https://github.com/aws-samples/generative-ai-use-cases-jp)
+---[ネイティブアプリのように利用する方法](https://github.com/aws-samples/generative-ai-use-cases-jp/blob/main/docs/PWA.md)
+--[Generative AI Use Cases JP をデプロイしてチャットを触ってみた](https://qiita.com/wasashi/items/76642d6a864ee7dafd29)
+--[AWSのGenUを試してみました。自社専用の生成AI利用システムが手軽に作れる！](https://biz.addisteria.com/aws_genu/)
 
-**インストールがうまくいかない場合 [#v65e8626]
+##インストールがうまくいかない場合 
 -nvmのインストールと更新
  $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
  $ sourece ~/.bashrc
@@ -47,12 +47,12 @@
  Default output format [None]: json
 
 -参考リンク
---[[Github nvm:https://github.com/nvm-sh/nvm]]
---[[Node.jsのバージョンをアップグレードする方法:https://qiita.com/takokke/items/df01818d65a0d4b1da90]]
---[[Node と NPM を最新バージョンに更新する方法:https://www.freecodecamp.org/japanese/news/how-to-update-node-and-npm-to-the-latest-version/]]
---[[AWS CLIを使用するためのconfigure設定方法:https://qiita.com/Kiyonchu/items/9b2f60e912a295c9261c]]
+--[Github nvm](https://github.com/nvm-sh/nvm)
+--[Node.jsのバージョンをアップグレードする方法](https://qiita.com/takokke/items/df01818d65a0d4b1da90)
+--[Node と NPM を最新バージョンに更新する方法](https://www.freecodecamp.org/japanese/news/how-to-update-node-and-npm-to-the-latest-version/)
+--[AWS CLIを使用するためのconfigure設定方法](https://qiita.com/Kiyonchu/items/9b2f60e912a295c9261c)
 
-**セキュリティ強化 [#xe085a48]
+##セキュリティ強化 
 -セルフサインアップを無効化する
 --context の selfSignUpEnabled に false を指定します。(デフォルトは true)
 --packages/cdk/cdk.json を編集
@@ -65,9 +65,9 @@
  $ npm run cdk:deploy 
 
 -参考リンク
---[[Github generative-ai-use-cases-jp:https://github.com/aws-samples/generative-ai-use-cases-jp]]
+--[Github generative-ai-use-cases-jp](https://github.com/aws-samples/generative-ai-use-cases-jp)
 
-**モデル追加 [#zf6a7719]
+##モデル追加 
 -modelIdsを変更
 --packages/cdk/cdk.json を編集
     "modelRegion": "us-west-2",
@@ -87,9 +87,9 @@
     ],
 
 -参考リンク
---[[バージニア北部で利用可能なモデル:https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/modelaccess]]
+--[バージニア北部で利用可能なモデル](https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/modelaccess)
 
-**ブラウザ拡張機能 [#f61c5ba4]
+##ブラウザ拡張機能 
 -準備
 --AWS CDKの出力をテキストファイルにメモ（コピー）しておく
  (前略)
@@ -123,16 +123,16 @@
 ---先程の npm run extension:build コマンドで生成した dist ディレクトリを選択（インストール完了）
 
 -参考リンク
---[[Github generative-ai-use-cases-jp ブラウザ拡張機能:https://github.com/aws-samples/generative-ai-use-cases-jp/blob/main/browser-extension/README.md]]
---[[無茶振りは生成 AI に断ってもらおう~ ブラウザに生成 AI を組み込んでみた ~:https://aws.amazon.com/jp/builders-flash/202405/genai-sorry-message/]]
+--[Github generative-ai-use-cases-jp ブラウザ拡張機能](https://github.com/aws-samples/generative-ai-use-cases-jp/blob/main/browser-extension/README.md)
+--[無茶振りは生成 AI に断ってもらおう~ ブラウザに生成 AI を組み込んでみた ~](https://aws.amazon.com/jp/builders-flash/202405/genai-sorry-message/)
 
-**ネイティブアプリのように利用する [#xb939ea4]
+##ネイティブアプリのように利用する 
 --デプロイした Web の URL にアクセスするとアドレスバー右のインストールボタンが表示されるので、クリックしてインストールする。 
 
 -参考リンク
---[[ネイティブアプリのように利用する方法:https://github.com/aws-samples/generative-ai-use-cases-jp/blob/main/docs/PWA.md]]
+--[ネイティブアプリのように利用する方法](https://github.com/aws-samples/generative-ai-use-cases-jp/blob/main/docs/PWA.md)
 
-**アップデート方法 [#wfa1c9a7]
+##アップデート方法 
 -main ブランチを pull する。
 すでにリポジトリを clone 済みで、初回デプロイが完了していることを想定
  $ git pull
@@ -142,9 +142,9 @@ Bootstrap は必要なし、パッケージがアップデートされている�
  npm run cdk:deploy
 
 -参考リンク
---[[アップデート方法(Github):https://github.com/aws-samples/generative-ai-use-cases-jp/blob/main/docs/UPDATE.md]]
+--[アップデート方法(Github)](https://github.com/aws-samples/generative-ai-use-cases-jp/blob/main/docs/UPDATE.md)
 
-**GenU環境のクリーンアップ（削除） [#y669c906]
+##GenU環境のクリーンアップ（削除） 
 -GenU のリソースを削除、10分程かかる
  $ npm run cdk:destroy
 --必要あれば、GenUに関連するS3バケットを空にし、削除する
@@ -153,5 +153,5 @@ Bootstrap は必要なし、パッケージがアップデートされている�
  $ npm run cdk:destroy "*"
 
 -参考リンク
---[[Generative AI Use Cases JP をデプロイしてチャットを触ってみた:https://qiita.com/wasashi/items/76642d6a864ee7dafd29]]
---[[GenUを構築してみた(後編):https://zenn.dev/oka_yama/articles/5b574ef27f3718]]
+--[Generative AI Use Cases JP をデプロイしてチャットを触ってみた](https://qiita.com/wasashi/items/76642d6a864ee7dafd29)
+--[GenUを構築してみた(後編)](https://zenn.dev/oka_yama/articles/5b574ef27f3718)

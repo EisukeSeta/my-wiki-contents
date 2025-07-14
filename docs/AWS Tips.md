@@ -44,7 +44,7 @@ nvm では Node.js の複数のバージョンをインストールすること�
 --[AWS CDK の開始方法](https://docs.aws.amazon.com/ja_jp/cdk/v2/guide/getting_started.html)
 --[ローカル環境でIAMロール権限を取得する](https://qiita.com/harumaki-web/items/f7ec46cb5f6b7b5a9cc3)
 
-1. Fargateの設定 
+# Fargateの設定 
 
 -参考リンク
 --[[[初心者向け]言われるままにFargate初めて触ったので、忘れないための記録:https://dev.classmethod.jp/articles/fargate-my-first-step/]]

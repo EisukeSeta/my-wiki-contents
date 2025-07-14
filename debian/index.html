@@ -103,8 +103,39 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
+            <li class="nav-item" data-bs-level="1"><a href="#_1" class="nav-link">目次</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
             <li class="nav-item" data-bs-level="1"><a href="#contents" class="nav-link">contents</a>
               <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#apt" class="nav-link">apt</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#apt-aptitude" class="nav-link">aptの使い方 （aptitudeを推奨）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#apt_1" class="nav-link">apt以外でインストール</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_2" class="nav-link">パッケージのインストールメモ</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#mysql" class="nav-link">MySQL</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#wordpress" class="nav-link">WordPress日本語版</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -113,11 +144,11 @@
                     <div class="col-md-9" role="main">
 
 <p>[[seta.go.dyndns.org]]</p>
-<p>*目次 [#e62c9df1]</p>
+<h1 id="_1">目次</h1>
 <h1 id="contents">contents</h1>
-<p><em>apt [#e6c9812b]
-</em>*aptの使い方 （aptitudeを推奨）[#f83c48ed]
- aptitude install YYXXXYY
+<h1 id="apt">apt</h1>
+<h2 id="apt-aptitude">aptの使い方 （aptitudeを推奨）</h2>
+<p>aptitude install YYXXXYY
  aptitude search XXX</p>
 <p>apt-get {update|upgrade|dist-upgrade}
  apt-get install YYXXXYY
@@ -125,49 +156,49 @@
  apt-cache show YYXXXYY</p>
 <p>インストール済みパッケージ一覧
  dpkg -l</p>
-<p>***apt-line [#qbfac96d]
- deb http://ftp.debian.org/debian lenny main contrib non-free</p>
+<h3 id="apt-line">apt-line</h3>
+<p>deb http://ftp.debian.org/debian lenny main contrib non-free</p>
 <p>deb http://security.debian.org/ lenny/updates main contrib non-free
  deb http://volatile.debian.org/debian-volatile lenny/volatile main contrib non-free </p>
 <p>deb http://ftp.jp.debian.org/debian-volatile lenny/volatile main contrib non-free</p>
-<p>[[lenny/Package:http://debian.fam.cx/index.php?lenny%2FPackage]]</p>
-<p>***Debian Backports [#r8f9b7f5]
-testing や unstable から Backport したパッケージを提供している。
+<p><a href="http://debian.fam.cx/index.php?lenny%2FPackage">lenny/Package</a></p>
+<h3 id="debian-backports">Debian Backports</h3>
+<p>testing や unstable から Backport したパッケージを提供している。
 どんなパッケージが提供されているかは、 http://packages.debian.org/lenny-backports/ を参照。</p>
 <p>deb http://ftp.jp.debian.org/debian-backports lenny-backports main contrib non-free
  deb-src http://ftp.jp.debian.org/debian-backports lenny-backports main contrib non-free</p>
 <p>上記以外のミラーは Debian Backports - Mirrors を参照。</p>
 <p>使い方は Debian Backports - Instructions や パッケージの FAQ - Backports を参照。</p>
 <p>まずは debian-backports-keyring パッケージをインストールし、公開鍵を入手して下さい。</p>
-<p>***apt-get [#v73282fe]
- apt-get install debian-backports-keyring
+<h3 id="apt-get">apt-get</h3>
+<p>apt-get install debian-backports-keyring
  apt-get install aptitude</p>
 <p>aptitude install php5
  aptitude install ddclient
  aptitude install mysql-server
  aptitude install php5-mysql</p>
-<p><strong>apt以外でインストール [#k6bb39fb]
-</strong>*tarball [#if2b4bfb]
- pukiwiki-1.4.7_notb_utf8.tar.gz
+<h2 id="apt_1">apt以外でインストール</h2>
+<h3 id="tarball">tarball</h3>
+<p>pukiwiki-1.4.7_notb_utf8.tar.gz
  wordpress-3.0.1-ja.tar.gz</p>
-<p><em>パッケージのインストールメモ [#j9040d6d]
-//</em>*apache2 [#c5da87e1]
+<h1 id="_2">パッケージのインストールメモ</h1>
+<p>//**apache2 
 ///etc/apache2/apache2.confのユーザー、グループを変更。
 // User www-data
 // Group www-data
 ///var/www/html以下も適宜変更。</p>
-<p><strong>MySQL [#k3ccdb32]
-</strong>*参考URL [#zc132122]
-+[[Debian etch に MySQL 5 と設定ツールを導入する:http://asaasa.tk/wiki/?Debian%2FServer%2FMySQL]]
-+[[debianにMySQLをインストールして設定する - 見果てぬ夢:http://d.hatena.ne.jp/Loups-garous/20080919/1221816870]]</p>
-<p>***インストール [#n34c4951]
- $ sudo aptitude install mysql-server
+<h2 id="mysql">MySQL</h2>
+<h3 id="url">参考URL</h3>
+<p>+<a href="http://asaasa.tk/wiki/?Debian%2FServer%2FMySQL">Debian etch に MySQL 5 と設定ツールを導入する</a>
++<a href="http://d.hatena.ne.jp/Loups-garous/20080919/1221816870">debianにMySQLをインストールして設定する - 見果てぬ夢</a></p>
+<h3 id="_3">インストール</h3>
+<p>$ sudo aptitude install mysql-server
  $ sudo aptitude install php5-mysql</p>
-<p>***起動確認 [#r64eaebf]
- $ mysqladmin ping -u root -p
+<h3 id="_4">起動確認</h3>
+<p>$ mysqladmin ping -u root -p
  mysqld is alive</p>
-<p>***uft-8設定 [#vfefe98f]
-/etc/mysql/my.cnfを編集。
+<h3 id="uft-8">uft-8設定</h3>
+<p>/etc/mysql/my.cnfを編集。
  [client]
  default-character-set=utf8</p>
 <p>[mysql] 
@@ -179,12 +210,12 @@ testing や unstable から Backport したパッケージを提供している�
 <p>文字コード確認。
  mysql&gt; status
  mysql&gt; SHOW VARIABLES LIKE 'char%'; </p>
-<p><strong>WordPress日本語版 [#y61b4f27]
-</strong>*参考URL [#fc2fd2f8]
-+[[WordPress.日本語:http://wpdocs.sourceforge.jp/]]
-+[[wordpressの設定 -metalglue:http://d.hatena.ne.jp/metalglue/20061204/1165231144]]</p>
-<p>***インストール [#o106424d]
-[[WordPress.日本語:http://wpdocs.sourceforge.jp/]]の[[WordPressのインストール:http://wpdocs.sourceforge.jp/WordPress_%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB]]に従い、最新版のWordPress日本語版をダウンロード（[[ja.wordpress.org:http://ja.wordpress.org/]]）。</p>
+<h2 id="wordpress">WordPress日本語版</h2>
+<h3 id="url_1">参考URL</h3>
+<p>+<a href="http://wpdocs.sourceforge.jp/">WordPress.日本語</a>
++<a href="http://d.hatena.ne.jp/metalglue/20061204/1165231144">wordpressの設定 -metalglue</a></p>
+<h3 id="_5">インストール</h3>
+<p><a href="http://wpdocs.sourceforge.jp/">WordPress.日本語</a>の<a href="http://wpdocs.sourceforge.jp/WordPress_%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">WordPressのインストール</a>に従い、最新版のWordPress日本語版をダウンロード（<a href="http://ja.wordpress.org/">ja.wordpress.org</a>）。</p>
 <p>MySQLデータベースの準備。
  $ mysql -u root -p
  mysql&gt; CREATE DATABASE wordpress;
@@ -192,11 +223,11 @@ testing や unstable から Backport したパッケージを提供している�
     -&gt; IDENTIFIED BY "password";
  mysql&gt; FLUSH PRIVILEGES;</p>
 <p>wordpressのインストール
-+[[http://seta.mydns.jp/html/wordpress/wp-admin/install.php:http://seta.mydns.jp/html/wordpress/wp-admin/install.php]]にアクセス。
++<a href="//seta.mydns.jp/html/wordpress/wp-admin/install.php:http://seta.mydns.jp/html/wordpress/wp-admin/install.php">http</a>にアクセス。
 +「5分でできるインストールプロセス」を実施。
 +最初の書き込みをチェックして終わり。</p>
-<p>***アクセス [#s6e0fe08]
-[[http://seta.mydns.jp/html/wordpress:http://seta.mydns.jp/html/wordpress]]</p></div>
+<h3 id="_6">アクセス</h3>
+<p><a href="//seta.mydns.jp/html/wordpress:http://seta.mydns.jp/html/wordpress">http</a></p></div>
             </div>
         </div>
 

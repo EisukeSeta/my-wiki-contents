@@ -102,34 +102,118 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#docker" class="nav-link">Docker運用手順</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#dockerwindows11-wsl2" class="nav-link">Dockerインストール手順（Windows11 WSL2）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#docker_1" class="nav-link">Docker運用手順</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#dockerwindows11-wsl2_1" class="nav-link">Dockerインストール手順（Windows11 WSL2）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#dockeraws-ec2" class="nav-link">Dockerインストール手順（AWS EC2）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#docker_2" class="nav-link">DOCKERコンテナ</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#pukiwikidocker" class="nav-link">pukiwikiをDockerコンテナでインストール</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#pukiwiki" class="nav-link">pukiwiki設定</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#dify" class="nav-link">Difyインストール</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_1" class="nav-link">関連ツール</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#aiwarp" class="nav-link">AIターミナル「warp」</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#amdwslamd-software" class="nav-link">AMDドライバ更新（WSL対応はAMD Software）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#dockeraws-ec2_1" class="nav-link">Dockerインストール手順（AWS EC2）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#docker_3" class="nav-link">DOCKERコンテナ</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#pukiwikidocker_1" class="nav-link">pukiwikiをDockerコンテナでインストール</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#pukiwiki_1" class="nav-link">pukiwiki設定</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#dify_1" class="nav-link">Difyインストール</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_2" class="nav-link">関連ツール</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#aiwarp_1" class="nav-link">AIターミナル「warp」</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#amdwslamd-software_1" class="nav-link">AMDドライバ更新（WSL対応はAMD Software）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
 <p>[[FrontPage]]</p>
-<p><em>Docker運用手順 [#c66b4221]
-</em>*Dockerインストール手順（Windows11 WSL2） [#j93ec79f]
--Ubuntu 20.04 をアップデートする [#yb3e066a]
+<h1 id="docker">Docker運用手順</h1>
+<h2 id="dockerwindows11-wsl2">Dockerインストール手順（Windows11 WSL2）</h2>
+<p>-Ubuntu 20.04 をアップデートする 
  $ sudo apt update[[FrontPage]]</p>
-<p><em>Docker運用手順 [#c66b4221]
-</em>*Dockerインストール手順（Windows11 WSL2） [#j93ec79f]
--Ubuntu 20.04 をアップデートする [#yb3e066a]
+<h1 id="docker_1">Docker運用手順</h1>
+<h2 id="dockerwindows11-wsl2_1">Dockerインストール手順（Windows11 WSL2）</h2>
+<p>-Ubuntu 20.04 をアップデートする 
  $ sudo apt update
  $ sudo apt upgrade -y
--必要なパッケージをインストールする [#b9b9370f]
+-必要なパッケージをインストールする 
  $ sudo apt install curl -y
  $ sudo apt install apt-transport-https -y
--Docker 公式 GPG 鍵を追加 [#u7191837]
+-Docker 公式 GPG 鍵を追加 
  $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
--Docker 安定版のレポジトリを追加 [#od049fd4]
+-Docker 安定版のレポジトリを追加 
  $ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
--レポジトリをアップデートし、Docker Engine をインストール [#k4888439]
+-レポジトリをアップデートし、Docker Engine をインストール 
  $ sudo apt update
  $ sudo apt install docker-ce docker-ce-cli containerd.io -y
--docker-compose もインストール [#w9c99bb0]
+-docker-compose もインストール 
  $ sudo apt install docker-compose -y
--Docker デーモンを起動 [#l21d39ee]
+-Docker デーモンを起動 
  $ sudo service docker start
 -Docker の容量の削減
  $ docker system df                # Docker の使用容量や割合の表示
@@ -141,12 +225,12 @@
  $ docker rm $(docker ps -aq)      # コンテナの全削除
  $ docker rmi $(docker images -q)  # イメージの全削除
  $ docker rmi <Image ID>           # 各イメージの削除</p>
-<p>-参考リンク [#sa868bfd]
---[[windowsにWSL2+Docker環境を構築する手順:https://qiita.com/taka777n/items/ea3a1b3a2802aabf3db2]]
---[[【2024年最新版】初心者のためのpukiwikiのインストール方法と使い方:https://wisenetwork.net/archives/2642]]
---[[Windows / WSL2 の容量を減らす方法:https://zenn.dev/anko/articles/976d904e53d87e]]</p>
-<p>**Dockerインストール手順（AWS EC2） [#k37f966d]
--EC2内のパッケージを最新にしておく
+<p>-参考リンク 
+--<a href="https://qiita.com/taka777n/items/ea3a1b3a2802aabf3db2">windowsにWSL2+Docker環境を構築する手順</a>
+--<a href="https://wisenetwork.net/archives/2642">【2024年最新版】初心者のためのpukiwikiのインストール方法と使い方</a>
+--<a href="https://zenn.dev/anko/articles/976d904e53d87e">Windows / WSL2 の容量を減らす方法</a></p>
+<h2 id="dockeraws-ec2">Dockerインストール手順（AWS EC2）</h2>
+<p>-EC2内のパッケージを最新にしておく
  $ sudo yum update -y
 -Docker Engineパッケージのインストール
  $ sudo yum install -y docker
@@ -169,10 +253,10 @@
  $ sudo usermod -a -G docker ec2-user
 -Docker Composeのインストール</p>
 <p>-参考リンク
---[[【AWS】EC2にDockerとDocker Composeをインストール:https://kacfg.com/aws-ec2-docker/]]
---[[パソコン起動時にWSLのdocker composeを自動起動させる:https://zenn.dev/quantum/articles/b1de629aca3cf0]]</p>
-<p>**DOCKERコンテナ [#p53eed3a]
--実行中のコンテナ名を確認
+--<a href="https://kacfg.com/aws-ec2-docker/">【AWS】EC2にDockerとDocker Composeをインストール</a>
+--<a href="https://zenn.dev/quantum/articles/b1de629aca3cf0">パソコン起動時にWSLのdocker composeを自動起動させる</a></p>
+<h2 id="docker_2">DOCKERコンテナ</h2>
+<p>-実行中のコンテナ名を確認
  $ docker ps
 -コンテナにログイン
  $ docker exec -it {コンテナ名} sh
@@ -190,13 +274,13 @@
 --pukiwiki停止
  $ docker compose down -v</p>
 <p>-参考リンク
---[[pukiwiki用Dockerコンテナ:https://hub.docker.com/r/pengo/pukiwiki]]
---[[Pukiwiki 用 Dockerコンテナを触ってみたメモ:https://qiita.com/smats-rd/items/3bdd70ce2de4e65cf0f0]]
---[[PukiWikiのインストール:https://saturday-in-the-park.netlify.app/AlpineLinux/12_PikiWiki/]]
---[[【Docker Compose】今更聞けない、docker-compose.ymlの書き方や仕組み:https://qiita.com/shimada_slj/items/3580b0426fa6b73e4638]]
---[[Docker-compose基礎:https://qiita.com/ryome/items/35df47a01a7fe3ac70ee]]</p>
-<p>**pukiwikiをDockerコンテナでインストール [#b003e734]
--インストール手順
+--<a href="https://hub.docker.com/r/pengo/pukiwiki">pukiwiki用Dockerコンテナ</a>
+--<a href="https://qiita.com/smats-rd/items/3bdd70ce2de4e65cf0f0">Pukiwiki 用 Dockerコンテナを触ってみたメモ</a>
+--<a href="https://saturday-in-the-park.netlify.app/AlpineLinux/12_PikiWiki/">PukiWikiのインストール</a>
+--<a href="https://qiita.com/shimada_slj/items/3580b0426fa6b73e4638">【Docker Compose】今更聞けない、docker-compose.ymlの書き方や仕組み</a>
+--<a href="https://qiita.com/ryome/items/35df47a01a7fe3ac70ee">Docker-compose基礎</a></p>
+<h2 id="pukiwikidocker">pukiwikiをDockerコンテナでインストール</h2>
+<p>-インストール手順
 --vオプションを省略すればマウントしない
  mkdir $HOME/pukiwiki
  docker run -p 8080:80 -v $HOME/pukiwiki:/ext -d pengo/pukiwiki
@@ -209,20 +293,20 @@
  diff/ : 更新履歴</p>
 <p>-pukiwikiのアンインストール方法
 --展開したフォルダごと削除すればアンインストール完了</p>
-<p>**pukiwiki設定 [#g8055808]
--pukiwiki.ini.phpを編集し、管理者パスワードを設定する（"!"の部分にmd5で暗号化し記入）
+<h2 id="pukiwiki">pukiwiki設定</h2>
+<p>-pukiwiki.ini.phpを編集し、管理者パスワードを設定する（"!"の部分にmd5で暗号化し記入）
  $adminpass = '{x-php-md5}!';
 -バックアップの出力（管理者パスワードが必要）
  http://localhost:8080/?cmd=dump</p>
 <p>-参考リンク
---[[Web Collaboration by PukiWik-pukiwikiで凍結した記事の内容が消える件について:https://www.kisnet.or.jp/~kanou/?Web+Collaboration+by+PukiWik-pukiwiki%E3%81%A7%E5%87%8D%E7%B5%90%E3%81%97%E3%81%9F%E8%A8%98%E4%BA%8B%E3%81%AE%E5%86%85%E5%AE%B9%E3%81%8C%E6%B6%88%E3%81%88%E3%82%8B%E4%BB%B6%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6]]
---[[md5変換ツール:https://dev.digitra.net/tools/md5encode.php]]
---[[pukiwiki新規設置時の改修点メモ（2020年版）:https://qiita.com/saitohsan/items/84960a23b2a9c3e35a27]]
---[[PukiWiki/Install/パーミッション設定:https://pukiwiki.sourceforge.io/?PukiWiki/Install/%E3%83%91%E3%83%BC%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E8%A8%AD%E5%AE%9A]]
---[[PukiWikiの管理パスワードとユーザー認証設定の更新:https://tetsuyai.hatenablog.com/entry/20080727]]
---[[データをバックアップ、リストアする:https://wiki.dobon.net/index.php?PukiWiki%2FTips%2F%A5%C7%A1%BC%A5%BF%A4%F2%A5%D0%A5%C3%A5%AF%A5%A2%A5%C3%A5%D7%A1%A2%A5%EA%A5%B9%A5%C8%A5%A2%A4%B9%A4%EB]]</p>
-<p>**Difyインストール [#k558cee0]
--Dify導入
+--<a href="https://www.kisnet.or.jp/~kanou/?Web+Collaboration+by+PukiWik-pukiwiki%E3%81%A7%E5%87%8D%E7%B5%90%E3%81%97%E3%81%9F%E8%A8%98%E4%BA%8B%E3%81%AE%E5%86%85%E5%AE%B9%E3%81%8C%E6%B6%88%E3%81%88%E3%82%8B%E4%BB%B6%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">Web Collaboration by PukiWik-pukiwikiで凍結した記事の内容が消える件について</a>
+--<a href="https://dev.digitra.net/tools/md5encode.php">md5変換ツール</a>
+--<a href="https://qiita.com/saitohsan/items/84960a23b2a9c3e35a27">pukiwiki新規設置時の改修点メモ（2020年版）</a>
+--<a href="https://pukiwiki.sourceforge.io/?PukiWiki/Install/%E3%83%91%E3%83%BC%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E8%A8%AD%E5%AE%9A">PukiWiki/Install/パーミッション設定</a>
+--<a href="https://tetsuyai.hatenablog.com/entry/20080727">PukiWikiの管理パスワードとユーザー認証設定の更新</a>
+--<a href="https://wiki.dobon.net/index.php?PukiWiki%2FTips%2F%A5%C7%A1%BC%A5%BF%A4%F2%A5%D0%A5%C3%A5%AF%A5%A2%A5%C3%A5%D7%A1%A2%A5%EA%A5%B9%A5%C8%A5%A2%A4%B9%A4%EB">データをバックアップ、リストアする</a></p>
+<h2 id="dify">Difyインストール</h2>
+<p>-Dify導入
  $ git clone https://github.com/langgenius/dify.git
 -Dify起動
  $ cp .env.example .env
@@ -248,16 +332,16 @@
  aws_secret_access_key = XXXXXXXXXXXX
 --Dify設定画面に入力（モデルIDは anthropic.claude-3-5-haiku-20241022-v1:0 など）</p>
 <p>-参考リンク
---[[プロキシ環境下のローカルPCに "Dify" を導入して、Bedrockする:https://qiita.com/yuki_ink/items/1367e0b2bb09c95c0570#4-dify-%E5%B0%8E%E5%85%A5]]
---[[Dify（ディファイ）on WSL2でgpt-4oを実験:https://qiita.com/potofo/items/62136d2e4a5ea2f65c25]]
---[[ノーコードLLM統合アプリのdifyでollamaと連携してみた:https://qiita.com/Tadataka_Takahashi/items/ba832511bd4fd5cd46f1]]
---[[【Dify】【Ollama】【WSL2】Difyをローカル環境で実行するまでの全手順:https://touch-sp.hatenablog.com/entry/2024/05/12/110240]]
-^^[[ollama用Dockerコンテナ:https://hub.docker.com/r/ollama/ollama]]
---[[ローカル環境でIAMロール権限を取得する:https://qiita.com/harumaki-web/items/f7ec46cb5f6b7b5a9cc3]]
---[[Dify導入 個人メモ:https://zenn.dev/metalmental/articles/20241003_dify]]</p>
-<p><em>関連ツール [#b8b464eb]
-</em>*AIターミナル「warp」 [#t0055c6c]
--WSLにインストール
+--<a href="https://qiita.com/yuki_ink/items/1367e0b2bb09c95c0570#4-dify-%E5%B0%8E%E5%85%A5">プロキシ環境下のローカルPCに "Dify" を導入して、Bedrockする</a>
+--<a href="https://qiita.com/potofo/items/62136d2e4a5ea2f65c25">Dify（ディファイ）on WSL2でgpt-4oを実験</a>
+--<a href="https://qiita.com/Tadataka_Takahashi/items/ba832511bd4fd5cd46f1">ノーコードLLM統合アプリのdifyでollamaと連携してみた</a>
+--<a href="https://touch-sp.hatenablog.com/entry/2024/05/12/110240">【Dify】【Ollama】【WSL2】Difyをローカル環境で実行するまでの全手順</a>
+^^<a href="https://hub.docker.com/r/ollama/ollama">ollama用Dockerコンテナ</a>
+--<a href="https://qiita.com/harumaki-web/items/f7ec46cb5f6b7b5a9cc3">ローカル環境でIAMロール権限を取得する</a>
+--<a href="https://zenn.dev/metalmental/articles/20241003_dify">Dify導入 個人メモ</a></p>
+<h1 id="_1">関連ツール</h1>
+<h2 id="aiwarp">AIターミナル「warp」</h2>
+<p>-WSLにインストール
  $ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
  $ sudo apt -y install ./google-chrome-stable_current_amd64.deb
 -~/.bash_profileに追加
@@ -267,12 +351,12 @@
 -warp起動
  $ warp-terminal</p>
 <p>-参考リンク
---[[The intelligent terminal. Warp:https://www.warp.dev/]]
---[[WSLのワープターミナルは素晴らしいです:https://dev.to/karleeov/warp-terminal-on-wsl-is-amazing-5bj4]]
---[[知らないなんてもったいない！次世代ターミナル「Warp」:https://qiita.com/shun_sakamoto/items/a0c79083c97064a361f2]]
---[[ターミナル「Warp」の便利機能とショートカットキー:https://zenn.dev/collabostyle/articles/00706975b8a29e]]</p>
-<p>**AMDドライバ更新（WSL対応は[[AMD Software: Adrenalin Edition™ 24.12.1 for WSL2:https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-24-12-1.html]]） [#ke1f945f]
--[[ROCmを使用したWSL用のRadeonソフトウェアのインストール:https://rocm.docs.amd.com/projects/radeon/en/latest/docs/install/wsl/install-radeon.html]]
+--<a href="https://www.warp.dev/">The intelligent terminal. Warp</a>
+--<a href="https://dev.to/karleeov/warp-terminal-on-wsl-is-amazing-5bj4">WSLのワープターミナルは素晴らしいです</a>
+--<a href="https://qiita.com/shun_sakamoto/items/a0c79083c97064a361f2">知らないなんてもったいない！次世代ターミナル「Warp」</a>
+--<a href="https://zenn.dev/collabostyle/articles/00706975b8a29e">ターミナル「Warp」の便利機能とショートカットキー</a></p>
+<h2 id="amdwslamd-software">AMDドライバ更新（WSL対応は<a href="Adrenalin Edition™ 24.12.1 for WSL2:https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-24-12-1.html">AMD Software</a>）</h2>
+<p>-<a href="https://rocm.docs.amd.com/projects/radeon/en/latest/docs/install/wsl/install-radeon.html">ROCmを使用したWSL用のRadeonソフトウェアのインストール</a>
  $ sudo apt update
  $ wget https://repo.radeon.com/amdgpu-install/6.1.3/ubuntu/jammy/amdgpu-install_6.1.60103-1_all.deb
  $ sudo apt install ./amdgpu-install_6.1.60103-1_all.deb
@@ -288,24 +372,24 @@
 -ROCmのアンインストール。次のコマンドを実行して、ROCmソフトウェアスタックおよびその他のLinux用Radeonソフトウェアコンポーネントをアンインストール。
  $ sudo amdgpu-uninstall</p>
 <p>-参考リンク
---[[Release notes amdgpu-install:https://repo.radeon.com/amdgpu-install/6.1.3/ubuntu/jammy/]]
---[[AMD Software: Adrenalin Edition 24.12.1 Release Notes:https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-24-12-1.html]]
---[[ROCmを使用したWSL用のRadeonソフトウェアのインストール::https://rocm.docs.amd.com/projects/radeon/en/latest/docs/install/wsl/install-radeon.html]]
---[[Windows11でAMD ROCmソフトウェアを実行する方法:https://capeta55.xsrv.jp/how-to-run-amd-rocm-on-windows11/]]</p>
+--<a href="https://repo.radeon.com/amdgpu-install/6.1.3/ubuntu/jammy/">Release notes amdgpu-install</a>
+--<a href="Adrenalin Edition 24.12.1 Release Notes:https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-24-12-1.html">AMD Software</a>
+--<a href=":https://rocm.docs.amd.com/projects/radeon/en/latest/docs/install/wsl/install-radeon.html">ROCmを使用したWSL用のRadeonソフトウェアのインストール</a>
+--<a href="https://capeta55.xsrv.jp/how-to-run-amd-rocm-on-windows11/">Windows11でAMD ROCmソフトウェアを実行する方法</a></p>
 <p>$ sudo apt upgrade -y
--必要なパッケージをインストールする [#b9b9370f]
+-必要なパッケージをインストールする 
  $ sudo apt install curl -y
  $ sudo apt install apt-transport-https -y
--Docker 公式 GPG 鍵を追加 [#u7191837]
+-Docker 公式 GPG 鍵を追加 
  $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
--Docker 安定版のレポジトリを追加 [#od049fd4]
+-Docker 安定版のレポジトリを追加 
  $ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
--レポジトリをアップデートし、Docker Engine をインストール [#k4888439]
+-レポジトリをアップデートし、Docker Engine をインストール 
  $ sudo apt update
  $ sudo apt install docker-ce docker-ce-cli containerd.io -y
--docker-compose もインストール [#w9c99bb0]
+-docker-compose もインストール 
  $ sudo apt install docker-compose -y
--Docker デーモンを起動 [#l21d39ee]
+-Docker デーモンを起動 
  $ sudo service docker start
 -Docker の容量の削減
  $ docker system df                # Docker の使用容量や割合の表示
@@ -317,12 +401,12 @@
  $ docker rm $(docker ps -aq)      # コンテナの全削除
  $ docker rmi $(docker images -q)  # イメージの全削除
  $ docker rmi <Image ID>           # 各イメージの削除</p>
-<p>-参考リンク [#sa868bfd]
---[[windowsにWSL2+Docker環境を構築する手順:https://qiita.com/taka777n/items/ea3a1b3a2802aabf3db2]]
---[[【2024年最新版】初心者のためのpukiwikiのインストール方法と使い方:https://wisenetwork.net/archives/2642]]
---[[Windows / WSL2 の容量を減らす方法:https://zenn.dev/anko/articles/976d904e53d87e]]</p>
-<p>**Dockerインストール手順（AWS EC2） [#k37f966d]
--EC2内のパッケージを最新にしておく
+<p>-参考リンク 
+--<a href="https://qiita.com/taka777n/items/ea3a1b3a2802aabf3db2">windowsにWSL2+Docker環境を構築する手順</a>
+--<a href="https://wisenetwork.net/archives/2642">【2024年最新版】初心者のためのpukiwikiのインストール方法と使い方</a>
+--<a href="https://zenn.dev/anko/articles/976d904e53d87e">Windows / WSL2 の容量を減らす方法</a></p>
+<h2 id="dockeraws-ec2_1">Dockerインストール手順（AWS EC2）</h2>
+<p>-EC2内のパッケージを最新にしておく
  $ sudo yum update -y
 -Docker Engineパッケージのインストール
  $ sudo yum install -y docker
@@ -345,10 +429,10 @@
  $ sudo usermod -a -G docker ec2-user
 -Docker Composeのインストール</p>
 <p>-参考リンク
---[[【AWS】EC2にDockerとDocker Composeをインストール:https://kacfg.com/aws-ec2-docker/]]
---[[パソコン起動時にWSLのdocker composeを自動起動させる:https://zenn.dev/quantum/articles/b1de629aca3cf0]]</p>
-<p>**DOCKERコンテナ [#p53eed3a]
--実行中のコンテナ名を確認
+--<a href="https://kacfg.com/aws-ec2-docker/">【AWS】EC2にDockerとDocker Composeをインストール</a>
+--<a href="https://zenn.dev/quantum/articles/b1de629aca3cf0">パソコン起動時にWSLのdocker composeを自動起動させる</a></p>
+<h2 id="docker_3">DOCKERコンテナ</h2>
+<p>-実行中のコンテナ名を確認
  $ docker ps
 -コンテナにログイン
  $ docker exec -it {コンテナ名} sh
@@ -366,13 +450,13 @@
 --pukiwiki停止
  $ docker compose down -v</p>
 <p>-参考リンク
---[[pukiwiki用Dockerコンテナ:https://hub.docker.com/r/pengo/pukiwiki]]
---[[Pukiwiki 用 Dockerコンテナを触ってみたメモ:https://qiita.com/smats-rd/items/3bdd70ce2de4e65cf0f0]]
---[[PukiWikiのインストール:https://saturday-in-the-park.netlify.app/AlpineLinux/12_PikiWiki/]]
---[[【Docker Compose】今更聞けない、docker-compose.ymlの書き方や仕組み:https://qiita.com/shimada_slj/items/3580b0426fa6b73e4638]]
---[[Docker-compose基礎:https://qiita.com/ryome/items/35df47a01a7fe3ac70ee]]</p>
-<p>**pukiwikiをDockerコンテナでインストール [#b003e734]
--インストール手順
+--<a href="https://hub.docker.com/r/pengo/pukiwiki">pukiwiki用Dockerコンテナ</a>
+--<a href="https://qiita.com/smats-rd/items/3bdd70ce2de4e65cf0f0">Pukiwiki 用 Dockerコンテナを触ってみたメモ</a>
+--<a href="https://saturday-in-the-park.netlify.app/AlpineLinux/12_PikiWiki/">PukiWikiのインストール</a>
+--<a href="https://qiita.com/shimada_slj/items/3580b0426fa6b73e4638">【Docker Compose】今更聞けない、docker-compose.ymlの書き方や仕組み</a>
+--<a href="https://qiita.com/ryome/items/35df47a01a7fe3ac70ee">Docker-compose基礎</a></p>
+<h2 id="pukiwikidocker_1">pukiwikiをDockerコンテナでインストール</h2>
+<p>-インストール手順
 --vオプションを省略すればマウントしない
  mkdir $HOME/pukiwiki
  docker run -p 8080:80 -v $HOME/pukiwiki:/ext -d pengo/pukiwiki
@@ -385,20 +469,20 @@
  diff/ : 更新履歴</p>
 <p>-pukiwikiのアンインストール方法
 --展開したフォルダごと削除すればアンインストール完了</p>
-<p>**pukiwiki設定 [#g8055808]
--pukiwiki.ini.phpを編集し、管理者パスワードを設定する（"!"の部分にmd5で暗号化し記入）
+<h2 id="pukiwiki_1">pukiwiki設定</h2>
+<p>-pukiwiki.ini.phpを編集し、管理者パスワードを設定する（"!"の部分にmd5で暗号化し記入）
  $adminpass = '{x-php-md5}!';
 -バックアップの出力（管理者パスワードが必要）
  http://localhost:8080/?cmd=dump</p>
 <p>-参考リンク
---[[Web Collaboration by PukiWik-pukiwikiで凍結した記事の内容が消える件について:https://www.kisnet.or.jp/~kanou/?Web+Collaboration+by+PukiWik-pukiwiki%E3%81%A7%E5%87%8D%E7%B5%90%E3%81%97%E3%81%9F%E8%A8%98%E4%BA%8B%E3%81%AE%E5%86%85%E5%AE%B9%E3%81%8C%E6%B6%88%E3%81%88%E3%82%8B%E4%BB%B6%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6]]
---[[md5変換ツール:https://dev.digitra.net/tools/md5encode.php]]
---[[pukiwiki新規設置時の改修点メモ（2020年版）:https://qiita.com/saitohsan/items/84960a23b2a9c3e35a27]]
---[[PukiWiki/Install/パーミッション設定:https://pukiwiki.sourceforge.io/?PukiWiki/Install/%E3%83%91%E3%83%BC%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E8%A8%AD%E5%AE%9A]]
---[[PukiWikiの管理パスワードとユーザー認証設定の更新:https://tetsuyai.hatenablog.com/entry/20080727]]
---[[データをバックアップ、リストアする:https://wiki.dobon.net/index.php?PukiWiki%2FTips%2F%A5%C7%A1%BC%A5%BF%A4%F2%A5%D0%A5%C3%A5%AF%A5%A2%A5%C3%A5%D7%A1%A2%A5%EA%A5%B9%A5%C8%A5%A2%A4%B9%A4%EB]]</p>
-<p>**Difyインストール [#k558cee0]
--Dify導入
+--<a href="https://www.kisnet.or.jp/~kanou/?Web+Collaboration+by+PukiWik-pukiwiki%E3%81%A7%E5%87%8D%E7%B5%90%E3%81%97%E3%81%9F%E8%A8%98%E4%BA%8B%E3%81%AE%E5%86%85%E5%AE%B9%E3%81%8C%E6%B6%88%E3%81%88%E3%82%8B%E4%BB%B6%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">Web Collaboration by PukiWik-pukiwikiで凍結した記事の内容が消える件について</a>
+--<a href="https://dev.digitra.net/tools/md5encode.php">md5変換ツール</a>
+--<a href="https://qiita.com/saitohsan/items/84960a23b2a9c3e35a27">pukiwiki新規設置時の改修点メモ（2020年版）</a>
+--<a href="https://pukiwiki.sourceforge.io/?PukiWiki/Install/%E3%83%91%E3%83%BC%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E8%A8%AD%E5%AE%9A">PukiWiki/Install/パーミッション設定</a>
+--<a href="https://tetsuyai.hatenablog.com/entry/20080727">PukiWikiの管理パスワードとユーザー認証設定の更新</a>
+--<a href="https://wiki.dobon.net/index.php?PukiWiki%2FTips%2F%A5%C7%A1%BC%A5%BF%A4%F2%A5%D0%A5%C3%A5%AF%A5%A2%A5%C3%A5%D7%A1%A2%A5%EA%A5%B9%A5%C8%A5%A2%A4%B9%A4%EB">データをバックアップ、リストアする</a></p>
+<h2 id="dify_1">Difyインストール</h2>
+<p>-Dify導入
  $ git clone https://github.com/langgenius/dify.git
 -Dify起動
  $ cp .env.example .env
@@ -424,16 +508,16 @@
  aws_secret_access_key = XXXXXXXXXXXX
 --Dify設定画面に入力（モデルIDは anthropic.claude-3-5-haiku-20241022-v1:0 など）</p>
 <p>-参考リンク
---[[プロキシ環境下のローカルPCに "Dify" を導入して、Bedrockする:https://qiita.com/yuki_ink/items/1367e0b2bb09c95c0570#4-dify-%E5%B0%8E%E5%85%A5]]
---[[Dify（ディファイ）on WSL2でgpt-4oを実験:https://qiita.com/potofo/items/62136d2e4a5ea2f65c25]]
---[[ノーコードLLM統合アプリのdifyでollamaと連携してみた:https://qiita.com/Tadataka_Takahashi/items/ba832511bd4fd5cd46f1]]
---[[【Dify】【Ollama】【WSL2】Difyをローカル環境で実行するまでの全手順:https://touch-sp.hatenablog.com/entry/2024/05/12/110240]]
-^^[[ollama用Dockerコンテナ:https://hub.docker.com/r/ollama/ollama]]
---[[ローカル環境でIAMロール権限を取得する:https://qiita.com/harumaki-web/items/f7ec46cb5f6b7b5a9cc3]]
---[[Dify導入 個人メモ:https://zenn.dev/metalmental/articles/20241003_dify]]</p>
-<p><em>関連ツール [#b8b464eb]
-</em>*AIターミナル「warp」 [#t0055c6c]
--WSLにインストール
+--<a href="https://qiita.com/yuki_ink/items/1367e0b2bb09c95c0570#4-dify-%E5%B0%8E%E5%85%A5">プロキシ環境下のローカルPCに "Dify" を導入して、Bedrockする</a>
+--<a href="https://qiita.com/potofo/items/62136d2e4a5ea2f65c25">Dify（ディファイ）on WSL2でgpt-4oを実験</a>
+--<a href="https://qiita.com/Tadataka_Takahashi/items/ba832511bd4fd5cd46f1">ノーコードLLM統合アプリのdifyでollamaと連携してみた</a>
+--<a href="https://touch-sp.hatenablog.com/entry/2024/05/12/110240">【Dify】【Ollama】【WSL2】Difyをローカル環境で実行するまでの全手順</a>
+^^<a href="https://hub.docker.com/r/ollama/ollama">ollama用Dockerコンテナ</a>
+--<a href="https://qiita.com/harumaki-web/items/f7ec46cb5f6b7b5a9cc3">ローカル環境でIAMロール権限を取得する</a>
+--<a href="https://zenn.dev/metalmental/articles/20241003_dify">Dify導入 個人メモ</a></p>
+<h1 id="_2">関連ツール</h1>
+<h2 id="aiwarp_1">AIターミナル「warp」</h2>
+<p>-WSLにインストール
  $ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
  $ sudo apt -y install ./google-chrome-stable_current_amd64.deb
 -~/.bash_profileに追加
@@ -443,10 +527,10 @@
 -warp起動
  $ warp-terminal</p>
 <p>-参考リンク
---[[The intelligent terminal. Warp:https://www.warp.dev/]]
---[[WSLのワープターミナルは素晴らしいです:https://dev.to/karleeov/warp-terminal-on-wsl-is-amazing-5bj4]]</p>
-<p>**AMDドライバ更新（WSL対応は[[AMD Software: Adrenalin Edition™ 24.12.1 for WSL2:https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-24-12-1.html]]） [#ke1f945f]
--[[ROCmを使用したWSL用のRadeonソフトウェアのインストール:https://rocm.docs.amd.com/projects/radeon/en/latest/docs/install/wsl/install-radeon.html]]
+--<a href="https://www.warp.dev/">The intelligent terminal. Warp</a>
+--<a href="https://dev.to/karleeov/warp-terminal-on-wsl-is-amazing-5bj4">WSLのワープターミナルは素晴らしいです</a></p>
+<h2 id="amdwslamd-software_1">AMDドライバ更新（WSL対応は<a href="Adrenalin Edition™ 24.12.1 for WSL2:https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-24-12-1.html">AMD Software</a>）</h2>
+<p>-<a href="https://rocm.docs.amd.com/projects/radeon/en/latest/docs/install/wsl/install-radeon.html">ROCmを使用したWSL用のRadeonソフトウェアのインストール</a>
  $ sudo apt update
  $ wget https://repo.radeon.com/amdgpu-install/6.1.3/ubuntu/jammy/amdgpu-install_6.1.60103-1_all.deb
  $ sudo apt install ./amdgpu-install_6.1.60103-1_all.deb
@@ -462,10 +546,10 @@
 -ROCmのアンインストール。次のコマンドを実行して、ROCmソフトウェアスタックおよびその他のLinux用Radeonソフトウェアコンポーネントをアンインストール。
  $ sudo amdgpu-uninstall</p>
 <p>-参考リンク
---[[Release notes amdgpu-install:https://repo.radeon.com/amdgpu-install/6.1.3/ubuntu/jammy/]]
---[[AMD Software: Adrenalin Edition 24.12.1 Release Notes:https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-24-12-1.html]]
---[[ROCmを使用したWSL用のRadeonソフトウェアのインストール::https://rocm.docs.amd.com/projects/radeon/en/latest/docs/install/wsl/install-radeon.html]]
---[[Windows11でAMD ROCmソフトウェアを実行する方法:https://capeta55.xsrv.jp/how-to-run-amd-rocm-on-windows11/]]</p></div>
+--<a href="https://repo.radeon.com/amdgpu-install/6.1.3/ubuntu/jammy/">Release notes amdgpu-install</a>
+--<a href="Adrenalin Edition 24.12.1 Release Notes:https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-24-12-1.html">AMD Software</a>
+--<a href=":https://rocm.docs.amd.com/projects/radeon/en/latest/docs/install/wsl/install-radeon.html">ROCmを使用したWSL用のRadeonソフトウェアのインストール</a>
+--<a href="https://capeta55.xsrv.jp/how-to-run-amd-rocm-on-windows11/">Windows11でAMD ROCmソフトウェアを実行する方法</a></p></div>
             </div>
         </div>
 
